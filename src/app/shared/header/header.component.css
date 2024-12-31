@@ -1,26 +1,187 @@
+/* General Styling */
+.dmHeaderContainer {
+    background-color: #fff;
+    /* Background color for the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for the header */
+}
+
+.unifiednav__container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.unifiednav__item-wrap {
+    position: relative;
+}
+
+/* Main Navigation Item */
+.unifiednav__item {
+    display: block;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+    /* Default text color */
+    transition: background-color 0.3s ease;
+}
+
+.unifiednav__item:hover,
+.unifiednav__item.dmNavItemSelected {
+    background-color: #f4f4f4;
+    /* Light gray on hover or when selected */
+}
+
+.nav-item-text {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-left: 5px;
+}
+
+/* Submenu Styles */
+.unifiednav__container_sub-nav {
+    display: none;
+    /* Hide submenus by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.unifiednav__container_sub-nav li {
+    padding: 10px 20px;
+}
+
+.unifiednav__container_sub-nav li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.unifiednav__container_sub-nav li a:hover {
+    background-color: #f4f4f4;
+    /* Light gray on hover */
+}
+
+/* Show Submenu on Hover */
+.unifiednav__item-wrap:hover .unifiednav__container_sub-nav,
+.unifiednav__item-wrap[aria-expanded="true"] .unifiednav__container_sub-nav {
+    display: block;
+    /* Show submenu when hovering over the parent item */
+}
+
+/* Active/Selected State for Menu Items */
+.unifiednav__item_has-sub-nav[aria-expanded="true"] .icon-angle-down::before {
+    content: "\25B2";
+    /* Change down arrow to up when the submenu is expanded */
+}
+
+.unifiednav__item_has-sub-nav[aria-expanded="false"] .icon-angle-down::before {
+    content: "\25BC";
+    /* Default down arrow */
+}
+
+/* Accessibility Focus Styles */
+.unifiednav__item[tabindex="0"]:focus {
+    outline: 2px solid #007bff;
+    /* Blue border on focus */
+}
+
+.unifiednav__item[tabindex="-1"]:focus {
+    outline: none;
+}
+
+/* Responsive Design: Adjust layout on smaller screens */
+@media (max-width: 768px) {
+    .unifiednav__container {
+        flex-direction: column;
+    }
+
+    .unifiednav__item-wrap {
+        width: 100%;
+    }
+
+    .unifiednav__container_sub-nav {
+        position: static;
+        box-shadow: none;
+        margin-top: 5px;
+    }
+
+    .unifiednav__container_sub-nav li {
+        padding: 8px 15px;
+    }
+}
+
+.image-logo {
+    display: block !important;
+    width: 203.525px !important;
+    padding: 10px 0 !important;
+    margin: 0 7px !important;
+}
+
+/*
+from here my code
+*/
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    /* Enables Flexbox layout */
+    justify-content: space-between;
+    /* Distribute space between the items */
+    gap: 20px;
+    /* Optional: Add some space between modules */
+    align-items: stretch;
+    /* Stretch the items to fill the container height */
 }
 
-header {
-    background-color: #f8f9fa;
-    /* Light background for header */
-    padding: 10px;
+/* Basic styling for the Contact Us button */
+.contact-us-button {
+    display: inline-block;
+    /* Make the link behave like a button */
+    background-color: white;
+    /* White background */
+    color: #007bff;
+    /* Blue text color */
+    padding: 10px 20px;
+    /* Padding around the text */
+    text-align: center;
+    /* Center text inside the button */
+    font-size: 16px;
+    /* Font size */
+    font-weight: bold;
+    /* Make the text bold */
+    border: none;
+    /* Remove the border */
+    border-radius: 5px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline from the link */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth color change on hover */
 }
 
-.nav-pills .nav-link.active {
+/* Add hover effect for the button */
+.contact-us-button:hover {
     background-color: #007bff;
-    /* Active link color */
-    color: #fff;
+    /* Change background to blue */
+    color: white;
+    /* Change text color to white */
 }
 
-.nav-pills .nav-link {
-    color: #000;
-    margin-right: 10px;
-}
-
-.nav-pills .nav-link:hover {
-    color: #0056b3;
-    text-decoration: underline;
+/* Optional: Add focus style for accessibility */
+.contact-us-button:focus {
+    outline: none;
+    /* Remove default outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Add a blue glow around the button */
 }
