@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router'; // Import RouterModule
 import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from "./shared/footer/footer.component";
+import { FooterComponent } from './shared/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderComponent, FooterComponent],
+  imports: [HeaderComponent, FooterComponent, RouterModule], // Include RouterModule
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'], // Fix typo
+  standalone: true, // If you're using standalone components
 })
 export class AppComponent {
   title = 'arborist-training';

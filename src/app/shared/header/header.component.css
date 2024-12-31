@@ -1,0 +1,26 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #f8f9fa;
+    /* Light background for header */
+    padding: 10px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff;
+    /* Active link color */
+    color: #fff;
+}
+
+.nav-pills .nav-link {
+    color: #000;
+    margin-right: 10px;
+}
+
+.nav-pills .nav-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
