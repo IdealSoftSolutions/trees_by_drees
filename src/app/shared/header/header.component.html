@@ -2,17 +2,18 @@
   <img [src]="headerData.logoUrl" width="150px"/>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
-      <button mat-button [matMenuTriggerFor]="menu">{{item.label}}</button>
+      <button class="menu-items" mat-button [matMenuTriggerFor]="menu"  
+     > {{item.label}}</button>
         <mat-menu #menu="matMenu">
           @for (subItem of item.subMenu; track $index) {
           <button mat-menu-item>{{subItem.label}}</button>
           }
         </mat-menu>
-      } 
-
-
+      }
+      <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false" aria-label="Example home icon" fontIcon="view_headline"></mat-icon>
   </div>
+  <button class="contact" mat-raised-button>Contact us</button>
 
-  <button mat-raised-button>Contact us</button>
-
+ 
+ 
 </div>

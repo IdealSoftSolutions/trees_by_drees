@@ -1,16 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
+import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+
 
 @Component({
   selector: 'app-header',
-  imports: [MatToolbarModule, MatIconModule,MatMenuModule,MatButtonModule],
+  imports: [MatToolbarModule, MatIconModule,MatMenuModule,MatButtonModule,MatSidenavModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
+  showFiller = false;
+
+  openMenu() {
+    this.menuTrigger.openMenu();
+  }
+
+  // Close the menu when mouse leaves
+  closeMenu() {
+    this.menuTrigger.closeMenu();
+  }
   headerData = {
     logoUrl: 'https://irp-cdn.multiscreensite.com/9513fda8/dms3rep/multi/AM_logo_2.svg',
     contactLink: '/contact',
