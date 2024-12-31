@@ -1,0 +1,30 @@
+.responsive-menu{
+    display: none;
+}
+
+
+
+.mdc-button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: black; /* Underline color */
+    transition: width 0.3s ease; /* Transition effect */
+  }
+  
+  /* On hover, expand the underline */
+.mdc-button:hover::after {
+    width: 100%;
+  }
+@media (max-width: 1000px) {
+    .responsive-menu {
+     display: block !important;
+    }
+    .menu-items,.contact{
+        display: none;
+    }
+   
+  }
