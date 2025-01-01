@@ -13,6 +13,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  mobileQuery !: MediaQueryList;
 
   @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
   showFiller = false;
