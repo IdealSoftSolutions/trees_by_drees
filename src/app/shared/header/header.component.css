@@ -1,13 +1,14 @@
-.responsive-menu{
-    display: none;
-    cursor: pointer;
+.responsive-menu {
+  display: none;
+  cursor: pointer;
 }
 
-.offcanvas{
+.offcanvas {
   background: #272a2f !important;
   color: white !important;
 }
-.btn-close{
+
+.btn-close {
   color: white !important;
 }
 
@@ -15,26 +16,32 @@
 
 
 .menu-items::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px; /* Thickness of the underline */
-    background-color: black; /* Underline color */
-    transition: width 0.5s ease; /* Transition effect */
-  }
-  
-  /* On hover, expand the underline */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  /* Thickness of the underline */
+  background-color: black;
+  /* Underline color */
+  transition: width 0.5s ease;
+  /* Transition effect */
+}
+
+/* On hover, expand the underline */
 .mdc-button:hover::after {
-    width: 100%;
-  }
+  width: 100%;
+}
+
 @media (max-width: 1000px) {
-    .responsive-menu {
-     display: block !important;
-    }
-    .menu-items,.contact{
-        display: none;
-    }
-   
+  .responsive-menu {
+    display: block !important;
   }
+
+  .menu-items,
+  .contact {
+    display: none;
+  }
+
+}
