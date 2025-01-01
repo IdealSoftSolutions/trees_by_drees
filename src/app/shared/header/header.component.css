@@ -1,10 +1,20 @@
 .responsive-menu{
     display: none;
+    cursor: pointer;
+}
+
+.offcanvas{
+  background: #272a2f !important;
+  color: white !important;
+}
+.btn-close{
+  color: white !important;
 }
 
 
 
-.mdc-button::after {
+
+.menu-items::after {
     content: '';
     position: absolute;
     left: 0;
@@ -12,7 +22,7 @@
     width: 0;
     height: 2px; /* Thickness of the underline */
     background-color: black; /* Underline color */
-    transition: width 0.3s ease; /* Transition effect */
+    transition: width 0.5s ease; /* Transition effect */
   }
   
   /* On hover, expand the underline */
