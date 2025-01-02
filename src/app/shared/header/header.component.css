@@ -3,12 +3,7 @@
   cursor: pointer;
 }
 
-.header{
-    position: fixed;
-    z-index: 1;
-    background: white;
-    box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
-}
+
 
 .offcanvas{
 background: #272a2f !important;

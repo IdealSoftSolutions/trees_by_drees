@@ -27,44 +27,12 @@ export class HeaderComponent implements OnInit {
       {
         label: 'Gallery',
         link: '#',
-        // subMenu: [
-        //   { label: 'About ArborMaster', link: '/about-arbormaster' },
-        //   { label: 'Message From President', link: '/message-from-president' },
-        //   { label: 'Our History', link: '/our-history' },
-        //   { label: 'Testimonials', link: '/testimonials' }
-        // ]
+       
       },
-      // {
-      //   label: 'Education & Training',
-      //   link: '#',
-      //   subMenu: [
-      //     { label: 'Types of Training', link: '/types-of-training' },
-      //     { label: 'Private On Site', link: '/private-on-site' },
-      //     {
-      //       label: 'Open Enrollment',
-      //       link: '#',
-      //       subMenu: [
-      //         { label: 'FAQ', link: '/FAQ' },
-      //         { label: 'Registration Information', link: '/registration-information' },
-      //         { label: 'Gallery', link: '/gallery' },
-      //         { label: 'Course Schedule / Locations & Where To Stay', link: '/course-schedule-locations-and-where-to-stay' }
-      //       ]
-      //     },
-      //     { label: 'Beyond Training', link: '/beyond-training' }
-      //   ]
-      // },
+     
       {
         label: 'Get a Quote',
         link: '/who-we-serve',
-      //   subMenu: [
-      //     { label: 'Utility', link: '/utility-and-utility-line-clearance' },
-      //     { label: 'Government & Military', link: '/government-local-state-and-federal' },
-      //     { label: 'Commercial & Residential', link: '/commercial-and-residential' }
-      //   ]
-      // },
-      // { label: 'Partners', link: '/partners', subMenu: [] },
-      // { label: 'News', link: '/news', subMenu: [] },
-      // { label: 'Blog', link: '/blog', subMenu: [] }
       }
     ]
   };
