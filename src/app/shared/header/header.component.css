@@ -1,31 +1,64 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+/* Navbar Header */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 75px;
+  color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Logo Styling */
+.navbar-header .logo {
+  width: 150px;
+  object-fit: contain;
+}
+
+/* Navbar Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 30px;
+}
+
+/* Main Header Styling */
 .header {
-  background-color: #fbf9f9;
-  padding: 10px 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
 
+/* Navbar Links */
 .header a {
-  color: rgb(56, 55, 55);
-  padding: 14px 20px;
+  color: #333;
+  padding: 15px 20px;
   text-decoration: none;
   text-transform: uppercase;
-  display: inline-block;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
 }
 
 .header a:hover {
-  background-color: #575757;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
 }
 
-.header a.active {
-  background-color: #4CAF50;
-}
-
+/* Dropdown Styles */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -34,18 +67,19 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
-  color: black;
+  color: #333;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
+  font-size: 13px;
 }
 
 .dropdown-content a:hover {
@@ -56,55 +90,46 @@ body {
   display: block;
 }
 
-
-
-/* My css here */
-
-
+/* Responsive Menu Button */
 .responsive-menu {
   display: none;
+  font-size: 24px;
+  color: #333;
   cursor: pointer;
 }
 
 .offcanvas {
-  background: #272a2f !important;
-  color: white !important;
+  background-color: #333;
+  color: white;
+  width: 250px;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.offcanvas-body {
+  padding: 20px;
 }
 
 .btn-close {
-  color: white !important;
+  color: white;
+  font-size: 20px;
 }
 
-
-
-
-.header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  /* Thickness of the underline */
-  background-color: black;
-  /* Underline color */
-  transition: width 0.5s ease;
-  /* Transition effect */
-}
-
-/* On hover, expand the underline */
-.mdc-button:hover::after {
-  width: 100%;
-}
-
+/* Mobile View Styles */
 @media (max-width: 1000px) {
   .responsive-menu {
-    display: block !important;
+    display: block;
   }
 
-  .header,
-  .contact {
+  .header a {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
+
+  .header {
     display: none;
   }
-
 }

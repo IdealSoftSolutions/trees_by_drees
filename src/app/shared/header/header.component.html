@@ -1,6 +1,6 @@
-<div class="container-fluid d-flex align-items-baseline justify-content-between">
-  <img [src]="headerData.logoUrl" width="150px" />
-  <div class="d-flex align-items-center">
+<div class="navbar-header">
+  <img [src]="headerData.logoUrl" class="logo" />
+  <div class="navbar-left">
     <div class="header">
       <a href="#home">Home</a>
       <div class="dropdown">
@@ -37,13 +37,11 @@
     </div>
     <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasRight" fontIcon="view_headline"></mat-icon>
-
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
       <div class="offcanvas-header justify-content-end">
         <mat-icon data-bs-dismiss="offcanvas" aria-label="Close" fontIcon="close"></mat-icon>
       </div>
       <div class="offcanvas-body">
-
       </div>
     </div>
   </div>
