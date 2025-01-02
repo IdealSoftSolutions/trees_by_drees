@@ -1,187 +1,136 @@
-/* General Styling */
-.dmHeaderContainer {
-    background-color: #fff;
-    /* Background color for the header */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for the header */
+/* Navbar Header */
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  height: 75px;
+  color: #333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.unifiednav__container {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+/* Logo Styling */
+.navbar-header .logo {
+  width: 126px;
+  height: 75px;
 }
 
-.unifiednav__item-wrap {
-    position: relative;
+/* Navbar Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 30px;
 }
 
-/* Main Navigation Item */
-.unifiednav__item {
+/* Main Header Styling */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 73px;
+}
+
+/* Navbar Links */
+.header a {
+  color: #333;
+  padding: 15px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.header a:hover {
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  top: 40px;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.dropdown-content a {
+  top: 10px;
+  color: #333;
+  padding: 12px 25px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive Menu Button */
+.responsive-menu {
+  display: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.offcanvas {
+  background-color: #333;
+  color: white;
+  width: 250px;
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.offcanvas-body {
+  padding: 20px;
+}
+
+.btn-close {
+  color: white;
+  font-size: 20px;
+}
+
+/* Mobile View Styles */
+@media (max-width: 1000px) {
+  .responsive-menu {
     display: block;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #333;
-    /* Default text color */
-    transition: background-color 0.3s ease;
-}
+  }
 
-.unifiednav__item:hover,
-.unifiednav__item.dmNavItemSelected {
-    background-color: #f4f4f4;
-    /* Light gray on hover or when selected */
-}
+  .header a {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
 
-.nav-item-text {
-    display: flex;
-    align-items: center;
-}
-
-.icon {
-    margin-left: 5px;
-}
-
-/* Submenu Styles */
-.unifiednav__container_sub-nav {
+  .header {
     display: none;
-    /* Hide submenus by default */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.unifiednav__container_sub-nav li {
-    padding: 10px 20px;
-}
-
-.unifiednav__container_sub-nav li a {
-    color: #333;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.unifiednav__container_sub-nav li a:hover {
-    background-color: #f4f4f4;
-    /* Light gray on hover */
-}
-
-/* Show Submenu on Hover */
-.unifiednav__item-wrap:hover .unifiednav__container_sub-nav,
-.unifiednav__item-wrap[aria-expanded="true"] .unifiednav__container_sub-nav {
-    display: block;
-    /* Show submenu when hovering over the parent item */
-}
-
-/* Active/Selected State for Menu Items */
-.unifiednav__item_has-sub-nav[aria-expanded="true"] .icon-angle-down::before {
-    content: "\25B2";
-    /* Change down arrow to up when the submenu is expanded */
-}
-
-.unifiednav__item_has-sub-nav[aria-expanded="false"] .icon-angle-down::before {
-    content: "\25BC";
-    /* Default down arrow */
-}
-
-/* Accessibility Focus Styles */
-.unifiednav__item[tabindex="0"]:focus {
-    outline: 2px solid #007bff;
-    /* Blue border on focus */
-}
-
-.unifiednav__item[tabindex="-1"]:focus {
-    outline: none;
-}
-
-/* Responsive Design: Adjust layout on smaller screens */
-@media (max-width: 768px) {
-    .unifiednav__container {
-        flex-direction: column;
-    }
-
-    .unifiednav__item-wrap {
-        width: 100%;
-    }
-
-    .unifiednav__container_sub-nav {
-        position: static;
-        box-shadow: none;
-        margin-top: 5px;
-    }
-
-    .unifiednav__container_sub-nav li {
-        padding: 8px 15px;
-    }
-}
-
-.image-logo {
-    display: block !important;
-    width: 203.525px !important;
-    padding: 10px 0 !important;
-    margin: 0 7px !important;
-}
-
-/*
-from here my code
-*/
-.container {
-    display: flex;
-    /* Enables Flexbox layout */
-    justify-content: space-between;
-    /* Distribute space between the items */
-    gap: 20px;
-    /* Optional: Add some space between modules */
-    align-items: stretch;
-    /* Stretch the items to fill the container height */
-}
-
-/* Basic styling for the Contact Us button */
-.contact-us-button {
-    display: inline-block;
-    /* Make the link behave like a button */
-    background-color: white;
-    /* White background */
-    color: #007bff;
-    /* Blue text color */
-    padding: 10px 20px;
-    /* Padding around the text */
-    text-align: center;
-    /* Center text inside the button */
-    font-size: 16px;
-    /* Font size */
-    font-weight: bold;
-    /* Make the text bold */
-    border: none;
-    /* Remove the border */
-    border-radius: 5px;
-    /* Rounded corners */
-    text-decoration: none;
-    /* Remove underline from the link */
-    transition: background-color 0.3s, color 0.3s;
-    /* Smooth color change on hover */
-}
-
-/* Add hover effect for the button */
-.contact-us-button:hover {
-    background-color: #007bff;
-    /* Change background to blue */
-    color: white;
-    /* Change text color to white */
-}
-
-/* Optional: Add focus style for accessibility */
-.contact-us-button:focus {
-    outline: none;
-    /* Remove default outline */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    /* Add a blue glow around the button */
+  }
 }
