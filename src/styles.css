@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+.mat-mdc-button:not(:disabled){
+    color:  black!important;
+}
+.mat-mdc-menu-panel{
+    background: white !important;
+}
+.mat-mdc-raised-button:not(:disabled){
+    color: black !important;
+}
+mat-icon{
+  cursor: pointer;
+}
+
