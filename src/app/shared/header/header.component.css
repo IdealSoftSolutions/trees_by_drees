@@ -1,3 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #fbf9f9;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.header a {
+  color: rgb(56, 55, 55);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.header a:hover {
+  background-color: #575757;
+}
+
+.header a.active {
+  background-color: #4CAF50;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+/* My css here */
+
+
 .responsive-menu {
   display: none;
   cursor: pointer;
@@ -15,7 +78,7 @@
 
 
 
-.menu-items::after {
+.header::after {
   content: '';
   position: absolute;
   left: 0;
@@ -39,7 +102,7 @@
     display: block !important;
   }
 
-  .menu-items,
+  .header,
   .contact {
     display: none;
   }

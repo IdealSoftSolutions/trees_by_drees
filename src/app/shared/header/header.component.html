@@ -1,14 +1,40 @@
 <div class="container-fluid d-flex align-items-baseline justify-content-between">
   <img [src]="headerData.logoUrl" width="150px" />
   <div class="d-flex align-items-center">
-    @for (item of headerData.menu; track item.label) {
-    <button class="menu-items" mat-button [matMenuTriggerFor]="menu"> {{item.label}}</button>
-    <mat-menu #menu="matMenu">
-      @for (subItem of item.subMenu; track $index) {
-      <button mat-menu-item>{{subItem.label}}</button>
-      }
-    </mat-menu>
-    }
+    <div class="header">
+      <a href="#home">Home</a>
+      <div class="dropdown">
+        <a href="#about">About</a>
+        <div class="dropdown-content">
+          <a href="#about-arbormaster">About ArborMaster</a>
+          <a href="#message-president">Message From President</a>
+          <a href="#history">Our History</a>
+          <a href="#testimonials">Testimonials</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#education-training">Education & Training</a>
+        <div class="dropdown-content">
+          <a href="#types-training">Types of Training</a>
+          <a href="#private-on-site">Private On Site</a>
+          <a href="#open-enrollment">Open Enrollment</a>
+          <a href="#faq">FAQ</a>
+          <a href="#registration-info">Registration Information</a>
+        </div>
+      </div>
+      <a href="#gallery">Gallery</a>
+      <a href="#course-schedule">Course Schedule / Locations & Where To Stay</a>
+      <a href="#beyond-training">Beyond Training</a>
+      <div class="dropdown">
+        <a href="#who-we-serve">Who We Serve</a>
+        <div class="dropdown-content">
+          <a href="#utility">Utility</a>
+          <a href="#government-military">Government & Military</a>
+          <a href="#commercial-residential">Commercial & Residential</a>
+        </div>
+      </div>
+      <a href="#blog">Contact us</a>
+    </div>
     <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasRight" fontIcon="view_headline"></mat-icon>
 
@@ -21,8 +47,4 @@
       </div>
     </div>
   </div>
-  <button class="contact" mat-raised-button>Contact us</button>
-
-
-
 </div>
