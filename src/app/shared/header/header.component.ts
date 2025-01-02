@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     menu: [
       { label: 'Home', link: '/', subMenu: [] },
       {
-        label: 'About',
+        label: 'Gallery',
         link: '#',
         subMenu: [
           { label: 'About ArborMaster', link: '/about-arbormaster' },
@@ -33,25 +33,25 @@ export class HeaderComponent implements OnInit {
           { label: 'Testimonials', link: '/testimonials' }
         ]
       },
-      {
-        label: 'Education & Training',
-        link: '#',
-        subMenu: [
-          { label: 'Types of Training', link: '/types-of-training' },
-          { label: 'Private On Site', link: '/private-on-site' },
-          {
-            label: 'Open Enrollment',
-            link: '#',
-            subMenu: [
-              { label: 'FAQ', link: '/FAQ' },
-              { label: 'Registration Information', link: '/registration-information' },
-              { label: 'Gallery', link: '/gallery' },
-              { label: 'Course Schedule / Locations & Where To Stay', link: '/course-schedule-locations-and-where-to-stay' }
-            ]
-          },
-          { label: 'Beyond Training', link: '/beyond-training' }
-        ]
-      },
+      // {
+      //   label: 'Education & Training',
+      //   link: '#',
+      //   subMenu: [
+      //     { label: 'Types of Training', link: '/types-of-training' },
+      //     { label: 'Private On Site', link: '/private-on-site' },
+      //     {
+      //       label: 'Open Enrollment',
+      //       link: '#',
+      //       subMenu: [
+      //         { label: 'FAQ', link: '/FAQ' },
+      //         { label: 'Registration Information', link: '/registration-information' },
+      //         { label: 'Gallery', link: '/gallery' },
+      //         { label: 'Course Schedule / Locations & Where To Stay', link: '/course-schedule-locations-and-where-to-stay' }
+      //       ]
+      //     },
+      //     { label: 'Beyond Training', link: '/beyond-training' }
+      //   ]
+      // },
       {
         label: 'Who We Serve',
         link: '/who-we-serve',
