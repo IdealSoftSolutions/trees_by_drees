@@ -1,33 +1,25 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar'
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
-import {MatMenuModule, MatMenuTrigger} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'; // Add for responsive
 
 @Component({
   selector: 'app-header',
-  imports: [MatToolbarModule, MatIconModule,MatMenuModule,MatButtonModule,MatSidenavModule],
+  imports: [MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule, MatSidenavModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrls: ['./header.component.css']  // Corrected here
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   mobileQuery !: MediaQueryList;
 
   @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
   showFiller = false;
 
-  openMenu() {
-    this.menuTrigger.openMenu();
-  }
-
-  // Close the menu when mouse leaves
-  closeMenu() {
-    this.menuTrigger.closeMenu();
-  }
   headerData = {
-    logoUrl: 'https://irp-cdn.multiscreensite.com/9513fda8/dms3rep/multi/AM_logo_2.svg',
+    logoUrl: 'assets/images/logo.jpg',
     contactLink: '/contact',
     menu: [
       { label: 'Home', link: '/', subMenu: [] },
@@ -74,5 +66,21 @@ export class HeaderComponent {
       { label: 'Blog', link: '/blog', subMenu: [] }
     ]
   };
-}
 
+  constructor(private breakpointObserver: BreakpointObserver) { }
+
+  ngOnInit(): void {
+    // Detect mobile view and update `mobileQuery`
+    this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
+      this.mobileQuery = result.matches ? window.matchMedia('(max-width: 600px)') : window.matchMedia('(min-width: 600px)');
+    });
+  }
+
+  openMenu() {
+    this.menuTrigger.openMenu();
+  }
+
+  closeMenu() {
+    this.menuTrigger.closeMenu();
+  }
+}

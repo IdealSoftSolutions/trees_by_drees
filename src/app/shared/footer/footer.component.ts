@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
+  footerdata = {
+    logoUrl: 'assets/images/logo.jpg',
+    background_image: 'assets/images/background-image.jpg'
+  }
 }

@@ -17,8 +17,8 @@
 
 /* Logo Styling */
 .navbar-header .logo {
-  width: 150px;
-  object-fit: contain;
+  width: 126px;
+  height: 75px;
 }
 
 /* Navbar Left Section */
