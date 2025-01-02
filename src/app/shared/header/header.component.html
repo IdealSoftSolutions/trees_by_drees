@@ -2,13 +2,8 @@
   <img [src]="headerData.logoUrl" width="100px"/>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
-      <button class="menu-items" mat-button [matMenuTriggerFor]="menu"  
+      <button class="menu-items" mat-button   
      > {{item.label}}</button>
-        <mat-menu #menu="matMenu">
-          @for (subItem of item.subMenu; track $index) {
-          <button mat-menu-item>{{subItem.label}}</button>
-          }
-        </mat-menu>
       }
       <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"  fontIcon="view_headline"></mat-icon>
 
@@ -17,11 +12,16 @@
           <mat-icon data-bs-dismiss="offcanvas" aria-label="Close" fontIcon="close"></mat-icon>
         </div>
         <div class="offcanvas-body">
-         
+          <mat-list role="list">
+            @for (item of headerData.menu; track item.label) {
+            <mat-list-item role="listitem">{{item.label}}</mat-list-item>
+            <hr/>
+            }
+          </mat-list>
         </div>
       </div>
   </div>
-  <button class="contact" mat-raised-button>Contact us</button>
+  <button class="contact" mat-button>Contact us</button>
 
  
  

@@ -17,6 +17,13 @@ color: white !important;
 .btn-close{
 color: white !important;
 }
+.offcanvas-body.mdc-list-item:hover .offcanvas-body.mdc-list-item__primary-text{
+  color: white !important;
+  cursor: pointer;
+}
+.offcanvas-body{
+  padding: 0 !important;
+}
 
 
 

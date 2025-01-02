@@ -4,11 +4,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'; // Add for responsive
 
 @Component({
   selector: 'app-header',
-  imports: [MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule, MatSidenavModule],
+  imports: [MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule, MatSidenavModule,MatListModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']  // Corrected here
 })
@@ -26,12 +27,12 @@ export class HeaderComponent implements OnInit {
       {
         label: 'Gallery',
         link: '#',
-        subMenu: [
-          { label: 'About ArborMaster', link: '/about-arbormaster' },
-          { label: 'Message From President', link: '/message-from-president' },
-          { label: 'Our History', link: '/our-history' },
-          { label: 'Testimonials', link: '/testimonials' }
-        ]
+        // subMenu: [
+        //   { label: 'About ArborMaster', link: '/about-arbormaster' },
+        //   { label: 'Message From President', link: '/message-from-president' },
+        //   { label: 'Our History', link: '/our-history' },
+        //   { label: 'Testimonials', link: '/testimonials' }
+        // ]
       },
       // {
       //   label: 'Education & Training',
@@ -53,17 +54,18 @@ export class HeaderComponent implements OnInit {
       //   ]
       // },
       {
-        label: 'Who We Serve',
+        label: 'Get a Quote',
         link: '/who-we-serve',
-        subMenu: [
-          { label: 'Utility', link: '/utility-and-utility-line-clearance' },
-          { label: 'Government & Military', link: '/government-local-state-and-federal' },
-          { label: 'Commercial & Residential', link: '/commercial-and-residential' }
-        ]
-      },
-      { label: 'Partners', link: '/partners', subMenu: [] },
-      { label: 'News', link: '/news', subMenu: [] },
-      { label: 'Blog', link: '/blog', subMenu: [] }
+      //   subMenu: [
+      //     { label: 'Utility', link: '/utility-and-utility-line-clearance' },
+      //     { label: 'Government & Military', link: '/government-local-state-and-federal' },
+      //     { label: 'Commercial & Residential', link: '/commercial-and-residential' }
+      //   ]
+      // },
+      // { label: 'Partners', link: '/partners', subMenu: [] },
+      // { label: 'News', link: '/news', subMenu: [] },
+      // { label: 'Blog', link: '/blog', subMenu: [] }
+      }
     ]
   };
 
