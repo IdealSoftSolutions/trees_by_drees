@@ -1,0 +1,68 @@
+.quote-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-form legend {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea.form-control {
+    resize: none;
+    height: 100px;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .quote-container {
+        padding: 15px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}
