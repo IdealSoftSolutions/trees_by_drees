@@ -1,219 +1,95 @@
-/* Main container for footer */
-.dmFooterContainer {
-    background-color: white;
-    color: black;
-    /* Changed to black for contrast, adjust as needed */
-    padding: 20px;
-}
-
-/* Footer section with background image */
-.dmFooterResp {
-    position: relative;
-    background-image: url('/assets/images/bg-image2.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 74px 0px;
-    overflow: hidden;
-
-}
-
-.dmFooterResp::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: inherit;
-    background-size: cover;
-    background-position: center;
-    filter: blur(10px);
-    /* Adjust blur level as needed */
-    z-index: -1;
-    /* Ensure it stays behind the content */
-}
-
-.font-size-30 {
-    font-size: 30px;
-    color: white;
-    /* Added white color */
-}
-
-/* Row structure for responsive design */
-.dmRespRow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Ensures images inside the widget scale correctly */
-.imageWidget img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Styling for paragraphs */
-.dmNewParagraph {
-    margin-bottom: 10px;
-}
-
-/* Center text */
-.text-align-center {
-    text-align: center;
-}
-
-/* Font size classes */
-.font-size-30 {
-    font-size: 30px;
-}
-
-.m-font-size-24 {
-    font-size: 24px;
-}
-
-/* Divider styling */
-.dmDivider {
-    border: 1px solid #ccc;
-}
-
-/* Social media links */
-.dmSocialHub {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.dmSocialHub a {
-    color: white;
-    font-size: 24px;
-    text-decoration: none;
-}
-
-.dmSocialHub a:hover {
-    opacity: 0.7;
-}
-
-/* Styling for footer links */
-.links a {
-    color: rgb(61, 57, 57);
-    text-decoration: none;
-    margin: 5px;
-}
-
-/* Main footer layout */
-.footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two equal columns */
-    gap: 20px;
-    /* Optional: Adds spacing between the columns */
-    padding: 20px;
-    background-color: #222;
-    color: white;
-}
-
-/* Footer section styling */
 .footer-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Footer logo image size */
-.footer-logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Footer links container */
-.footer-links {
-    margin-top: 20px;
-}
-
-/* Styling for footer links */
-.footer-link {
-    color: #1088C9;
-    text-decoration: none;
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: 400;
-    text-align: left;
-    padding: 0;
-}
-
-.footer-side-left {
-    font-size: 1em;
-    font-weight: 400;
-    text-align: left;
-    padding: 0;
-    color: #f7f7f7;
-}
-
-.footer-link:hover {
+    width: 100%;
+    display: inline-block;
+    background: #6e8385;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
     text-decoration: underline;
 }
 
-/* Footer item container */
-.footer-item {
-    margin-bottom: 10px;
+.mat-footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: white;
+    color: rgb(7, 6, 6);
 }
 
-/* Footer item link styling */
-.footer-item-link {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 16px;
+.mat-footer-left {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
 }
 
-.footer-item-link:hover {
-    color: #1088C9;
+.mat-footer-center,
+.mat-footer-right {
+    flex: 1;
+    min-width: 200px;
+    padding: 50px;
 }
 
-/* Contact section title */
-.footer-contact-title {
-    font-size: 18px;
+.mat-footer h3 {
+    margin: 0;
+    font-size: 24px;
     font-weight: bold;
-    color: #1088C9;
-    text-transform: uppercase;
-    margin-bottom: 20px;
 }
 
-/* Contact item styling */
-.footer-contact-item {
-    margin-bottom: 20px;
+.footer-links a {
+    color: rgb(14, 13, 13);
+    text-decoration: none;
+    margin: 0 5px;
+    font-size: 14px;
 }
 
-.footer-contact-item img {
-    max-width: 50px;
-    height: auto;
+.footer-links a:hover {
+    text-decoration: underline;
 }
 
-/* Media query for smaller screens (mobile and tablets) */
-@media (max-width: 768px) {
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
 
-    /* Adjust grid layout to single column */
-    .footer {
-        grid-template-columns: 1fr;
+.contact-item mat-icon {
+    margin-right: 10px;
+}
+
+.social-icons button {
+    margin-right: 10px;
+    color: rgb(46, 43, 43);
+}
+
+.social-icons button mat-icon {
+    font-size: 20px;
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 880px) {
+    .mat-footer {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .mat-footer-left,
+    .mat-footer-center,
+    .mat-footer-right {
+        min-width: auto;
+        width: 100%;
         text-align: center;
     }
 
-    /* Space out footer logo */
-    .footer-logo {
-        margin-bottom: 20px;
+    .footer-links {
+        text-align: center;
     }
 
-    /* Adjust layout for footer links and contact items */
-    .footer-links,
-    .footer-contact-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .contact-item {
+        justify-content: center;
     }
 
-    /* Adjust link margin */
-    .footer-link,
-    .footer-item-link {
-        margin-bottom: 10px;
+    .social-icons {
+        text-align: center;
     }
 }
