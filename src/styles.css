@@ -20,4 +20,15 @@ h1 {
 mat-icon{
   cursor: pointer;
 }
+.offcanvas-body .mdc-list-item__primary-text{
+  color: white !important;
+  cursor: pointer;
+}
+.mat-mdc-form-field-infix{
+   min-height: 30px !important;
+    padding-top: var(--mat-form-field-filled-with-label-container-padding-top, 24px);
+     padding-bottom: var(--mat-form-field-filled-with-label-container-padding-bottom, 8px);
+  
+}
+
 
