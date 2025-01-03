@@ -6,10 +6,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'; // Add for responsive
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  imports: [MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule, MatSidenavModule,MatListModule],
+  imports: [MatToolbarModule, MatIconModule, MatMenuModule, MatButtonModule, MatSidenavModule,MatListModule,RouterModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']  // Corrected here
 })
