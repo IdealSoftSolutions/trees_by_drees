@@ -1,38 +1,36 @@
-<section>Footer Example 4</section>
-<div class="footer-distributed">
-  <div class="footer-left">
-    <h3>Company<span>logo</span></h3>
-    <p class="footer-links">
-      <a href="#" class="link-1">Privacy Policy</a>
-      <a href="#">Terms & Conditions</a>
-    </p>
-    <p class="footer-company-name">Company Name © 2015</p>
+<div class="footer-section">
+  <div class="mat-footer-right">
+    <p>About the company</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce euismod convallis velit.</p>
+    <div class="social-icons">
+      <button mat-icon-button><mat-icon>facebook</mat-icon></button>
+      <button mat-icon-button><mat-icon>twitter</mat-icon></button>
+      <button mat-icon-button><mat-icon>linkedin</mat-icon></button>
+      <button mat-icon-button><mat-icon>github</mat-icon></button>
+    </div>
   </div>
-  <div class="footer-center">
-    <div>
-      <i class="fa fa-map-marker"></i>
+</div>
+<div class="mat-footer">
+  <div class="mat-footer-left">
+    <img src="{{footerdata.logoUrl}}" alt="Company Logo" class="footer-logo">
+    <p class="footer-links">
+      <a mat-button href="#">Privacy Policy</a> |
+      <a mat-button href="#">Terms & Conditions</a>
+    </p>
+    <p>Company Name © 2025</p>
+  </div>
+  <div class="mat-footer-center">
+    <div class="contact-item">
+      <mat-icon>location_on</mat-icon>
       <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
     </div>
-    <div>
-      <i class="fa fa-phone"></i>
+    <div class="contact-item">
+      <mat-icon>phone</mat-icon>
       <p>+1.555.555.5555</p>
     </div>
-    <div>
-      <i class="fa fa-envelope"></i>
+    <div class="contact-item">
+      <mat-icon>email</mat-icon>
       <p><a href="mailto:support&#64;company.com">support&#64;company.com</a></p>
-    </div>
-  </div>
-  <div class="footer-right">
-    <p class="footer-company-about">
-      <span>About the company</span>
-      Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula
-      sit amet.
-    </p>
-    <div class="footer-icons">
-      <a href="#"><i class="fa fa-facebook"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
-      <a href="#"><i class="fa fa-linkedin"></i></a>
-      <a href="#"><i class="fa fa-github"></i></a>
     </div>
   </div>
 </div>
