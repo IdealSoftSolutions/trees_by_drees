@@ -1,0 +1,47 @@
+<div class="quote-container">
+  <form class="quote-form" action="#" method="post">
+    <fieldset>
+      <legend>Request a Quote</legend>
+
+      <!-- Name Section -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" placeholder="Your Full Name" class="form-control" type="text" required />
+      </div>
+
+      <!-- Email Section -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input id="email" name="email" placeholder="Your Email Address" class="form-control" type="email" required />
+      </div>
+
+      <!-- Phone Section -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" name="phone" placeholder="Your Phone Number" class="form-control" type="text" required />
+      </div>
+
+      <!-- Service Type Section -->
+      <div class="form-group">
+        <label for="service">Type of Service</label>
+        <select id="service" name="service" class="form-control">
+          <option value="" disabled selected>Select Service Type</option>
+          <option>Tree Trimming</option>
+          <option>Tree Removal</option>
+          <option>Arborist Consultation</option>
+          <option>Stump Grinding</option>
+        </select>
+      </div>
+
+      <!-- Description Section -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" class="form-control" name="description"
+          placeholder="Describe your project in detail"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-primary">Get Quote</button>
+    </fieldset>
+  </form>
+</div>
