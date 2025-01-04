@@ -32,3 +32,20 @@ mat-icon{
 }
 
 
+.mat-success {
+  background: linear-gradient(45deg, #66bb6a, #43a047) !important; /* Gradient from lighter to darker green */
+  color: white !important;
+  border: none !important; /* Optional: Ensure no borders interfere */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2) !important; /* Optional: Add a subtle shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s !important; /* Optional: Smooth hover effects */
+}
+
+.mat-success:hover {
+  transform: translateY(-2px) !important; /* Slight lift on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3) !important; /* More prominent shadow on hover */
+}
+
+.mat-success.mat-mdc-button:not(:disabled),.mat-success.mat-mdc-raised-button:not(:disabled){
+  color: white !important;
+}
+

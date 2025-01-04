@@ -2,9 +2,6 @@
   display: none;
   cursor: pointer;
 }
-
-
-
 .offcanvas{
 background: #272a2f !important;
 color: white !important;
@@ -32,6 +29,9 @@ color: white !important;
   height: 2px; /* Thickness of the underline */
   background-color: black; /* Underline color */
   transition: width 0.5s ease; /* Transition effect */
+}
+
+.active{
 }
 
 /* On hover, expand the underline */

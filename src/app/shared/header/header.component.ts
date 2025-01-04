@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
      
       {
         label: 'Get a Quote',
-        link: '/who-we-serve',
+        link: '/getQuote',
       }
     ]
   };
