@@ -42,14 +42,14 @@
       </div>
 
       <!-- Address Section -->
-       <div formGroupName="address">
-        <div class="row">
+       <div formGroupName="address" class="row">
+        <div class="col-sm-6">
             <label for="house_no">Address (Appartment/Suit No.)</label>
             <mat-form-field appearance="outline"  class="w-100">
               <input matInput  maxlength="50" formControlName="house_no" placeholder="Enter Address">
             </mat-form-field>
           </div>
-          <div class="row">
+         
            <div class="col-sm-6">
             <label for="phone">City</label>
             <mat-form-field appearance="outline"   class="w-100">
@@ -62,8 +62,13 @@
               <input matInput  maxlength="50" formControlName="state">
             </mat-form-field>
            </div>
+           <div class="col-sm-6">
+            <label for="zipcode">Zip code</label>
+            <mat-form-field appearance="outline"   class="w-100">
+              <input matInput (keypress)="numericOnly($event)"  maxlength="5" formControlName="zipcode">
+            </mat-form-field>
+           </div>
           </div>
-       </div>
 
       <!-- Service Type Section -->
       <div >
