@@ -17,18 +17,7 @@
     color: rgb(7, 6, 6);
 }
 
-.mat-footer-left {
-    flex: 1;
-    min-width: 200px;
-    padding: 15px;
-}
 
-.mat-footer-center,
-.mat-footer-right {
-    flex: 1;
-    min-width: 200px;
-    padding: 50px;
-}
 
 .mat-footer h3 {
     margin: 0;

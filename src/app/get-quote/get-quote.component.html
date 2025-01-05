@@ -1,47 +1,97 @@
 <div class="quote-container">
-  <form class="quote-form" action="#" method="post">
+  <form [formGroup]="getAQuoteForm" class="quote-form">
     <fieldset>
       <legend>Request a Quote</legend>
 
       <!-- Name Section -->
-      <div class="form-group">
-        <label for="name">Full Name</label>
-        <input id="name" name="name" placeholder="Your Full Name" class="form-control" type="text" required />
+      <div class="row">
+        <div class="col-sm-6">
+        <label for="name">First Name*</label>
+        <mat-form-field appearance="outline" class="w-100">
+          <input matInput  maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')" formControlName="first_name" placeholder="Enter your first name" required>
+          <mat-error  class="fs-11 fw-normal" *ngIf="submitted && form?.['first_name']?.errors">First name is required </mat-error>
+        </mat-form-field>
+         </div>
+         <div class="col-sm-6">
+          <label for="name">Last Name*</label>
+          <mat-form-field appearance="outline" class="w-100">
+            <input matInput  maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')" formControlName="last_name" placeholder="Enter your last name" required>
+              <mat-error  class="fs-11 fw-normal" *ngIf="submitted && form?.['last_name']?.errors">Last name is required </mat-error>
+          </mat-form-field>
+           </div>
       </div>
 
       <!-- Email Section -->
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input id="email" name="email" placeholder="Your Email Address" class="form-control" type="email" required />
+      <div >
+        <label for="email">Email Address*</label>
+        <mat-form-field appearance="outline"  class="w-100 d-flex">
+          <input matInput formControlName="email" placeholder="Enter Email Address" required>
+          <mat-icon matPrefix>email</mat-icon>
+          <mat-error  *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
+        </mat-form-field>
       </div>
 
       <!-- Phone Section -->
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input id="phone" name="phone" placeholder="Your Phone Number" class="form-control" type="text" required />
+      <div >
+        <label for="phone">Phone Number*</label>
+        <mat-form-field appearance="outline"  class="w-100">
+          <span matTextPrefix>+1 &nbsp;</span>
+          <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone" placeholder="Enter Phone Number" required>
+          <mat-error  *ngIf="submitted && form?.['phone']?.errors">Phone Number is required</mat-error>
+        </mat-form-field>
       </div>
 
+      <!-- Address Section -->
+       <div formGroupName="address">
+        <div class="row">
+            <label for="house_no">Address (Appartment/Suit No.)</label>
+            <mat-form-field appearance="outline"  class="w-100">
+              <input matInput  maxlength="50" formControlName="house_no" placeholder="Enter Address">
+            </mat-form-field>
+          </div>
+          <div class="row">
+           <div class="col-sm-6">
+            <label for="phone">City</label>
+            <mat-form-field appearance="outline"   class="w-100">
+              <input matInput  maxlength="50" formControlName="city">
+            </mat-form-field>
+           </div>
+           <div class="col-sm-6">
+            <label for="phone">State</label>
+            <mat-form-field appearance="outline"   class="w-100">
+              <input matInput  maxlength="50" formControlName="state">
+            </mat-form-field>
+           </div>
+          </div>
+       </div>
+
       <!-- Service Type Section -->
-      <div class="form-group">
+      <div >
         <label for="service">Type of Service</label>
-        <select id="service" name="service" class="form-control">
-          <option value="" disabled selected>Select Service Type</option>
-          <option>Tree Trimming</option>
-          <option>Tree Removal</option>
-          <option>Arborist Consultation</option>
-          <option>Stump Grinding</option>
-        </select>
+        <mat-form-field appearance="outline"  class="w-100">
+          <mat-select formControlName="service" multiple>
+            @for (list of serviceList; track list) {
+              <mat-option [value]="list">{{list}}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
       </div>
 
       <!-- Description Section -->
-      <div class="form-group">
+      <div >
         <label for="description">Description</label>
-        <textarea id="description" class="form-control" name="description"
-          placeholder="Describe your project in detail"></textarea>
+        <mat-form-field appearance="outline" class="w-100">
+          <textarea matInput formControlName="description"
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="5"
+                    cdkAutosizeMaxRows="10"></textarea>
+        </mat-form-field>
       </div>
 
-      <!-- Submit Button -->
-      <button type="submit" class="btn btn-primary">Get Quote</button>
+    <div>
+      <button (click)="onSubmit()"  class="contact w-100  mat-success mt-2" mat-raised-button >Get A Quote</button>
+    </div>
     </fieldset>
   </form>
 </div>
