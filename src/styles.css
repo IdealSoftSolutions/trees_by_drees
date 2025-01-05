@@ -48,4 +48,11 @@ mat-icon{
 .mat-success.mat-mdc-button:not(:disabled),.mat-success.mat-mdc-raised-button:not(:disabled){
   color: white !important;
 }
+.mdc-text-field__input{
+  font-size: 14px !important ;
+}
+.mdc-text-field--outlined.mdc-text-field--disabled .mdc-text-field__input{
+  color: black !important;
+  font-weight: bold !important;
+}
 

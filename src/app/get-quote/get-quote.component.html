@@ -9,38 +9,61 @@
         <label for="name">First Name*</label>
         <mat-form-field appearance="outline" class="w-100">
           <input matInput  maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')" formControlName="first_name" placeholder="Enter your first name" required>
-          <mat-error  class="fs-11 fw-normal" *ngIf="form?.['first_name']?.errors">First name is required </mat-error>
+          <mat-error  class="fs-11 fw-normal" *ngIf="submitted && form?.['first_name']?.errors">First name is required </mat-error>
         </mat-form-field>
          </div>
          <div class="col-sm-6">
           <label for="name">Last Name*</label>
           <mat-form-field appearance="outline" class="w-100">
             <input matInput  maxlength="50" oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')" formControlName="last_name" placeholder="Enter your last name" required>
-              <mat-error  class="fs-11 fw-normal" *ngIf="form?.['last_name']?.errors">Last name is required </mat-error>
+              <mat-error  class="fs-11 fw-normal" *ngIf="submitted && form?.['last_name']?.errors">Last name is required </mat-error>
           </mat-form-field>
            </div>
       </div>
 
       <!-- Email Section -->
       <div >
-        <label for="email">Email Address</label>
+        <label for="email">Email Address*</label>
         <mat-form-field appearance="outline"  class="w-100 d-flex">
-          <input matInput formControlName="email" placeholder="Enter your full name" required>
+          <input matInput formControlName="email" placeholder="Enter Email Address" required>
           <mat-icon matPrefix>email</mat-icon>
-          <!-- <mat-error *ngIf="enrollForm.get('name')?.hasError('required')">Full name is required</mat-error> -->
+          <mat-error  *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
         </mat-form-field>
       </div>
 
       <!-- Phone Section -->
       <div >
-        <label for="phone">Phone Number</label>
-        
+        <label for="phone">Phone Number*</label>
         <mat-form-field appearance="outline"  class="w-100">
           <span matTextPrefix>+1 &nbsp;</span>
-          <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone" placeholder="Enter your full name" required>
-          <!-- <mat-error *ngIf="enrollForm.get('name')?.hasError('required')">Full name is required</mat-error> -->
+          <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone" placeholder="Enter Phone Number" required>
+          <mat-error  *ngIf="submitted && form?.['phone']?.errors">Phone Number is required</mat-error>
         </mat-form-field>
       </div>
+
+      <!-- Address Section -->
+       <div formGroupName="address">
+        <div class="row">
+            <label for="house_no">Address (Appartment/Suit No.)</label>
+            <mat-form-field appearance="outline"  class="w-100">
+              <input matInput  maxlength="50" formControlName="house_no" placeholder="Enter Address">
+            </mat-form-field>
+          </div>
+          <div class="row">
+           <div class="col-sm-6">
+            <label for="phone">City</label>
+            <mat-form-field appearance="outline"   class="w-100">
+              <input matInput  maxlength="50" formControlName="city">
+            </mat-form-field>
+           </div>
+           <div class="col-sm-6">
+            <label for="phone">State</label>
+            <mat-form-field appearance="outline"   class="w-100">
+              <input matInput  maxlength="50" formControlName="state">
+            </mat-form-field>
+           </div>
+          </div>
+       </div>
 
       <!-- Service Type Section -->
       <div >

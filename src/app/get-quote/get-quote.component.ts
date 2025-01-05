@@ -36,6 +36,12 @@ export class GetQuoteFormComponent {
       phone: ['', Validators.required],
       service: ['', Validators.required],
       description: ['', Validators.required],
+      address:this.fb.group({
+        house_no:[],
+        city:[{value:'Saint Louis',disabled: true} ],
+        state:[{value:'Missouri',disabled:true}],
+        zipcode:[]
+      })
     });
   }
 
