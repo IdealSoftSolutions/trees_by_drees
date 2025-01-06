@@ -1,68 +1,65 @@
-.quote-container {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.section-gap {
+    padding: 120px 0;
 }
 
-.quote-form legend {
-    font-size: 28px;
-    font-weight: bold;
+.relative {
+    position: relative;
+}
+
+.overlay-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(17, 22, 24, 0.75);
+    z-index: 0;
+    /* Ensure it sits below the content */
+}
+
+.reservation-area .container {
+    position: relative;
+    z-index: 1;
+    /* Place content above the overlay */
+}
+
+
+
+.reservation-area {
+    background: url("/assets/images/quote-image.jpeg") no-repeat center/cover;
+    position: relative;
+    color: WHITE !important;
+}
+
+.reservation-left h1,
+.reservation-left p {
+    color: #fff;
+}
+
+.reservation-right .form-wrap {
+    background: #fff;
+    padding: 100px 40px;
     text-align: center;
-    margin-bottom: 20px;
-    color: #007bff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-.form-control {
+.reservation-right .form-control,
+.reservation-right select {
     width: 100%;
+    margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
-textarea.form-control {
-    resize: none;
-    height: 100px;
-}
-
-.btn {
-    display: inline-block;
-    width: 100%;
-    padding: 10px 15px;
-    background: #007bff;
+.primary-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
+    text-transform: uppercase;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
     cursor: pointer;
-    text-align: center;
-    font-weight: bold;
 }
 
-.btn:hover {
-    background: #0056b3;
-}
-
-@media (max-width: 768px) {
-    .quote-container {
-        padding: 15px;
-    }
-
-    .btn {
-        font-size: 14px;
-    }
+.primary-btn:hover {
+    background-color: #0056b3;
 }
