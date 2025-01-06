@@ -8,51 +8,83 @@ body {
 h1 {
   font-family: 'Poppins', sans-serif;
 }
-.mat-mdc-button:not(:disabled){
-    color:  black!important;
+
+.mat-mdc-button:not(:disabled) {
+  color: black !important;
 }
-.mat-mdc-menu-panel{
-    background: white !important;
+
+.mat-mdc-menu-panel {
+  background: white !important;
 }
-.mat-mdc-raised-button:not(:disabled){
-    color: black !important;
+
+.mat-mdc-raised-button:not(:disabled) {
+  color: black !important;
 }
-mat-icon{
+
+mat-icon {
   cursor: pointer;
 }
-.offcanvas-body .mdc-list-item__primary-text{
+
+.offcanvas-body .mdc-list-item__primary-text {
   color: white !important;
   cursor: pointer;
 }
-.mat-mdc-form-field-infix{
-   min-height: 30px !important;
-    padding-top: var(--mat-form-field-filled-with-label-container-padding-top, 24px);
-     padding-bottom: var(--mat-form-field-filled-with-label-container-padding-bottom, 8px);
-  
+
+.mat-mdc-form-field-infix {
+  min-height: 30px !important;
+  padding-top: var(--mat-form-field-filled-with-label-container-padding-top, 24px);
+  padding-bottom: var(--mat-form-field-filled-with-label-container-padding-bottom, 8px);
+
 }
 
 
 .mat-success {
-  background: linear-gradient(45deg, #66bb6a, #43a047) !important; /* Gradient from lighter to darker green */
+  background: linear-gradient(45deg, #66bb6a, #43a047) !important;
+  /* Gradient from lighter to darker green */
   color: white !important;
-  border: none !important; /* Optional: Ensure no borders interfere */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2) !important; /* Optional: Add a subtle shadow for depth */
-  transition: transform 0.2s, box-shadow 0.2s !important; /* Optional: Smooth hover effects */
+  border: none !important;
+  /* Optional: Ensure no borders interfere */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2) !important;
+  /* Optional: Add a subtle shadow for depth */
+  transition: transform 0.2s, box-shadow 0.2s !important;
+  /* Optional: Smooth hover effects */
 }
 
 .mat-success:hover {
-  transform: translateY(-2px) !important; /* Slight lift on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3) !important; /* More prominent shadow on hover */
+  transform: translateY(-2px) !important;
+  /* Slight lift on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3) !important;
+  /* More prominent shadow on hover */
 }
 
-.mat-success.mat-mdc-button:not(:disabled),.mat-success.mat-mdc-raised-button:not(:disabled){
+.mat-success.mat-mdc-button:not(:disabled),
+.mat-success.mat-mdc-raised-button:not(:disabled) {
   color: white !important;
 }
-.mdc-text-field__input{
-  font-size: 14px !important ;
+
+.mdc-text-field__input {
+  font-size: 14px !important;
+  color: white !important;
+  border: 1px solid white !important;
 }
-.mdc-text-field--outlined.mdc-text-field--disabled .mdc-text-field__input{
+
+.mdc-text-field--outlined.mdc-text-field--disabled .mdc-text-field__input {
   color: black !important;
   font-weight: bold !important;
 }
 
+::ng-deep {
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: white !important;
+  }
+
+  mat-form-field {
+
+    .mat-hint,
+    input,
+    ::placeholder,
+    .mat-form-field-label {
+      color: white !important;
+    }
+  }
+}
