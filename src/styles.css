@@ -68,23 +68,3 @@ mat-icon {
   border: 1px solid white !important;
 }
 
-.mdc-text-field--outlined.mdc-text-field--disabled .mdc-text-field__input {
-  color: black !important;
-  font-weight: bold !important;
-}
-
-::ng-deep {
-  .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: white !important;
-  }
-
-  mat-form-field {
-
-    .mat-hint,
-    input,
-    ::placeholder,
-    .mat-form-field-label {
-      color: white !important;
-    }
-  }
-}

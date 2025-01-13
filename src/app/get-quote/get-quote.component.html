@@ -17,7 +17,7 @@
             <!-- Name Section -->
             <div class="row">
               <div class="col-sm-6">
-                <label for="name">First Name*</label>
+                <label class="mb-1" for="name">First Name*</label>
                 <mat-form-field appearance="outline">
                   <input matInput maxlength="50"
                     oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')"
@@ -28,7 +28,7 @@
                 </mat-form-field>
               </div>
               <div class="col-sm-6">
-                <label for="name">Last Name*</label>
+                <label class="mb-1" for="name">Last Name*</label>
                 <mat-form-field appearance="outline">
                   <input matInput maxlength="50"
                     oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')"
@@ -42,17 +42,17 @@
 
             <!-- Email Section -->
             <div>
-              <label for="email">Email Address*</label>
+              <label class="mb-1" for="email">Email Address*</label>
               <mat-form-field appearance="outline" class="w-100 d-flex">
                 <input matInput formControlName="email" placeholder="Enter Email Address" required>
-                <mat-icon matPrefix>email</mat-icon>
+                <mat-icon  fontIcon="email" matPrefix></mat-icon>
                 <mat-error *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
               </mat-form-field>
             </div>
 
             <!-- Phone Section -->
             <div>
-              <label for="phone">Phone Number*</label>
+              <label class="mb-1" for="phone">Phone Number*</label>
               <mat-form-field appearance="outline" class="w-100">
                 <span matTextPrefix>+1 &nbsp;</span>
                 <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone"
@@ -64,26 +64,26 @@
             <!-- Address Section -->
             <div formGroupName="address" class="row">
               <div class="col-sm-6">
-                <label for="house_no">Address (Appartment/Suit No.)</label>
+                <label class="mb-1" for="house_no">Address (Appartment/Suit No.)</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50" formControlName="house_no" placeholder="Enter Address">
                 </mat-form-field>
               </div>
 
               <div class="col-sm-6">
-                <label for="phone">City</label>
+                <label class="mb-1" for="phone">City</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50" formControlName="city">
                 </mat-form-field>
               </div>
               <div class="col-sm-6">
-                <label for="phone">State</label>
+                <label class="mb-1" for="phone">State</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50" formControlName="state">
                 </mat-form-field>
               </div>
               <div class="col-sm-6">
-                <label for="zipcode">Zip code</label>
+                <label class="mb-1" for="zipcode">Zip code</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput (keypress)="numericOnly($event)" maxlength="5" formControlName="zipcode">
                 </mat-form-field>
@@ -92,7 +92,7 @@
 
             <!-- Service Type Section -->
             <div>
-              <label for="service">Type of Service</label>
+              <label class="mb-1" for="service">Type of Service</label>
               <mat-form-field appearance="outline" class="w-100">
                 <mat-select formControlName="service" multiple>
                   @for (list of serviceList; track list) {
@@ -104,7 +104,7 @@
 
             <!-- Description Section -->
             <div>
-              <label for="description">Description</label>
+              <label class="mb-1" for="description">Description</label>
               <mat-form-field appearance="outline" class="w-100">
                 <textarea matInput formControlName="description" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
                   cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea>
