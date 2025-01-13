@@ -1,24 +1,36 @@
+
 <section class="reservation-area section-gap relative">
+
   <div class="overlay-bg"></div>
+  <div class="text-center pt-4 mb-4">
+    <h1 class=" d-inline ">Request Your Tree Service Quote</h1>
+  </div>
   <div class="container">
-    <div class="row">
-      <div class="col-lg-6 reservation-left">
-        <h1>Reserve Your Seats to Confirm if You Come with Your Family</h1>
-        <p class="pt-20">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
-        </p>
+    <div class="row align-items-center">
+      <div class="col-lg-4 reservation-left">
+        <div>
+          <h3> Quality Tree Services by a Dedicated Professional</h3>
+          <p class="">
+            Need help with tree trimming, removal, or maintenance? As a passionate tree care specialist, I am here to provide reliable and affordable services tailored to your needs.</p>
+        </div>
+        <div>
+          <h3>Let’s Bring Your Landscape Back to Life</h3>
+          <p class="">
+            With years of experience and a commitment to excellence, I ensure your property is in safe hands. Request your personalized quote today!</p>
+        </div>
+       
+        
       </div>
-      <div class="col-lg-5 reservation-right">
+      <div class="col-lg-8 p-5 reservation-right rounded">
         <form [formGroup]="getAQuoteForm" class="quote-form">
-          <fieldset>
-            <legend>Request a Quote</legend>
+         
+           
 
             <!-- Name Section -->
             <div class="row">
-              <div class="col-sm-6">
-                <label class="mb-1" for="name">First Name*</label>
-                <mat-form-field appearance="outline">
+              <div class="col-sm-4 mb-2">
+                <label class="mb-1 fw-bold" for="name">First Name*</label>
+                <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50"
                     oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')"
                     formControlName="first_name" placeholder="Enter your first name" required>
@@ -27,9 +39,9 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-sm-6">
-                <label class="mb-1" for="name">Last Name*</label>
-                <mat-form-field appearance="outline">
+              <div class="col-sm-4 mb-2">
+                <label class="mb-1 fw-bold" for="name">Last Name*</label>
+                <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50"
                     oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')"
                     formControlName="last_name" placeholder="Enter your last name" required>
@@ -38,84 +50,78 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-            </div>
-
-            <!-- Email Section -->
-            <div>
-              <label class="mb-1" for="email">Email Address*</label>
-              <mat-form-field appearance="outline" class="w-100 d-flex">
-                <input matInput formControlName="email" placeholder="Enter Email Address" required>
-                <mat-icon  fontIcon="email" matPrefix></mat-icon>
-                <mat-error *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
-              </mat-form-field>
-            </div>
-
-            <!-- Phone Section -->
-            <div>
-              <label class="mb-1" for="phone">Phone Number*</label>
-              <mat-form-field appearance="outline" class="w-100">
-                <span matTextPrefix>+1 &nbsp;</span>
-                <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone"
-                  placeholder="Enter Phone Number" required>
-                <mat-error *ngIf="submitted && form?.['phone']?.errors">Phone Number is required</mat-error>
-              </mat-form-field>
-            </div>
-
-            <!-- Address Section -->
-            <div formGroupName="address" class="row">
-              <div class="col-sm-6">
-                <label class="mb-1" for="house_no">Address (Appartment/Suit No.)</label>
+              <div class="col-sm-4 mb-2">
+                <label class="mb-1 fw-bold" for="phone">Phone Number*</label>
+                <mat-form-field appearance="outline" class="w-100">
+                  <span matTextPrefix>+1 &nbsp;</span>
+                  <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone"
+                    placeholder="Enter Phone Number" required>
+                  <mat-error *ngIf="submitted && form?.['phone']?.errors">Phone Number is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="email">Email Address*</label>
+                <mat-form-field appearance="outline" class="w-100 d-flex">
+                  <input matInput formControlName="email" placeholder="Enter Email Address" required>
+                  <mat-icon  fontIcon="email" matPrefix></mat-icon>
+                  <mat-error *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
+                </mat-form-field>
+              </div>
+             
+              <div formGroupName="address" class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="house_no">Appartment/Suit No</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50" formControlName="house_no" placeholder="Enter Address">
                 </mat-form-field>
               </div>
+            </div>
+           
 
-              <div class="col-sm-6">
-                <label class="mb-1" for="phone">City</label>
+            <!-- Address Section -->
+            <div  class="row">
+              <ng-container formGroupName="address">
+              <div class="col-sm-4 mb-2">
+                <label class="mb-1 fw-bold" for="phone">City</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50" formControlName="city">
                 </mat-form-field>
               </div>
-              <div class="col-sm-6">
-                <label class="mb-1" for="phone">State</label>
+              <div class="col-sm-4 mb-2">
+                <label class="mb-1 fw-bold" for="phone">State</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50" formControlName="state">
                 </mat-form-field>
               </div>
-              <div class="col-sm-6">
-                <label class="mb-1" for="zipcode">Zip code</label>
+              <div class="col-sm-4 mb-2">
+                <label class="mb-1 fw-bold" for="zipcode">Zip code</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput (keypress)="numericOnly($event)" maxlength="5" formControlName="zipcode">
                 </mat-form-field>
               </div>
+            </ng-container>
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="service">Type of Service</label>
+                <mat-form-field appearance="outline" class="w-100">
+                  <mat-select formControlName="service" multiple>
+                    @for (list of serviceList; track list) {
+                    <mat-option [value]="list">{{list}}</mat-option>
+                    }
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="description">Describe what type of services you are looking for.</label>
+                <mat-form-field appearance="outline" class="w-100">
+                  <textarea matInput formControlName="description" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
+                </mat-form-field>
+              </div>
+           
             </div>
-
-            <!-- Service Type Section -->
-            <div>
-              <label class="mb-1" for="service">Type of Service</label>
-              <mat-form-field appearance="outline" class="w-100">
-                <mat-select formControlName="service" multiple>
-                  @for (list of serviceList; track list) {
-                  <mat-option [value]="list">{{list}}</mat-option>
-                  }
-                </mat-select>
-              </mat-form-field>
-            </div>
-
-            <!-- Description Section -->
-            <div>
-              <label class="mb-1" for="description">Description</label>
-              <mat-form-field appearance="outline" class="w-100">
-                <textarea matInput formControlName="description" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
-                  cdkAutosizeMinRows="5" cdkAutosizeMaxRows="10"></textarea>
-              </mat-form-field>
-            </div>
-
-            <div>
-              <button (click)="onSubmit()" class="contact w-100  mat-success mt-2" mat-raised-button>Get A
+            <div class="text-center">
+              <button (click)="onSubmit()" class="contact w-50 mat-success mt-2" mat-raised-button>Get A
                 Quote</button>
             </div>
-          </fieldset>
         </form>
       </div>
     </div>

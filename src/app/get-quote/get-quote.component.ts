@@ -34,8 +34,8 @@ export class GetQuoteFormComponent {
       last_name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email, Validators.pattern('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,8}$')]],
       phone: ['', Validators.required],
-      service: ['', Validators.required],
-      description: ['', Validators.required],
+      service: [''],
+      description: [''],
       address:this.fb.group({
         house_no:[],
         city:[{value:'Saint Louis',disabled: true} ],
