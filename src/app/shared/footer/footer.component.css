@@ -1,233 +1,81 @@
-.footer-section {
+.footer {
+    position: relative;
+    /* Ensure the pseudo-element positions correctly */
+    background-color: var(--background-color);
+    /* Keep background color if needed */
+    font-size: 14px;
+    padding-bottom: 50px;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/images/footer-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px);
+    /* Adjust the blur amount */
+    z-index: 0;
+    /* Place it behind the content */
+}
+
+
+.footer .footer-section {
+    position: relative;
+    z-index: 1;
+    /* Ensure content is above the blurred background */
+    background: transparent;
+    /* Ensure no background color overlaps */
     width: 100%;
     display: inline-block;
-    background: #6e8385;
-    height: 50vh;
+    height: 40vh;
     text-align: center;
     font-size: 22px;
     font-weight: 700;
-    text-decoration: underline;
-}
-
-.mat-footer {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 20px;
-    background-color: white;
-    color: #070606;
-}
-
-.mat-footer h3 {
-    margin: 0;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.footer-links a {
-    color: #0e0d0d;
-    text-decoration: none;
-    margin: 0 5px;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.contact-item mat-icon {
-    margin-right: 10px;
-}
-
-.social-icons button {
-    margin-right: 10px;
-    color: #2e2b2b;
-}
-
-.social-icons button mat-icon {
-    font-size: 20px;
-}
-
-@media (max-width: 880px) {
-    .mat-footer {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .mat-footer-left,
-    .mat-footer-center,
-    .mat-footer-right {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-links,
-    .contact-item,
-    .social-icons {
-        text-align: center;
-    }
-}
-
-.footer {
-    background: url("/assets/images/footer.webp");
-    color: var(--default-color);
-    background-color: var(--background-color);
-    font-size: 14px;
-    padding-bottom: 50px;
-    position: relative;
 }
 
 .footer .footer-top {
+    position: relative;
+    z-index: 1;
+    /* Ensure content is above the blurred background */
+    background: transparent;
+    /* Ensure no background color overlaps */
     padding-top: 50px;
 }
 
-.footer .footer-about .logo {
-    margin-bottom: 0;
-}
-
-.footer .footer-about .logo img {
-    max-height: 40px;
-    margin-right: 6px;
-}
-
-.footer .footer-about .logo span {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: var(--heading-font);
-    color: var(--heading-color);
-}
-
-.footer .footer-about p {
-    font-size: 14px;
-    font-family: var(--heading-font);
-}
-
-.footer .social-links a {
+.container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-    font-size: 16px;
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    margin-right: 10px;
-    transition: 0.3s;
+    /* Use flexbox for alignment */
+    justify-content: space-between;
+    /* Distribute divs evenly */
+    align-items: flex-start;
+    /* Align items at the top */
+    flex-wrap: wrap;
+    /* Wrap elements if the screen size is too small */
+    margin-top: 100px;
+    /* Add a margin to the container */
 }
 
-.footer .social-links a:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
+.col-lg-4 {
+    flex: 0 0 33.33%;
+    /* Make it take 1/3 of the container width */
+    max-width: 33.33%;
+    /* Set a maximum width */
+    /* Example background color */
+    padding: 10px;
+    /* Add padding for content spacing */
 }
 
-.footer h4 {
-    font-size: 16px;
-    font-weight: bold;
-    position: relative;
-    padding-bottom: 12px;
-}
-
-.footer .footer-links {
-    margin-bottom: 30px;
-}
-
-.footer .footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer .footer-links ul i {
-    padding-right: 2px;
-    font-size: 12px;
-    line-height: 0;
-}
-
-.footer .footer-links ul li {
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-}
-
-.footer .footer-links ul li:first-child {
-    padding-top: 0;
-}
-
-.footer .footer-links ul a {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
-    display: inline-block;
-    line-height: 1;
-}
-
-.footer .footer-links ul a:hover {
-    color: var(--accent-color);
-}
-
-.footer .footer-contact p {
-    margin-bottom: 5px;
-}
-
-.footer .footer-newsletter .newsletter-form {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    padding: 6px 8px;
-    position: relative;
-    border-radius: 50px;
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-    display: flex;
-    background-color: var(--surface-color);
-    transition: 0.3s;
-}
-
-.footer .footer-newsletter .newsletter-form:focus-within {
-    border-color: var(--accent-color);
-}
-
-.footer .footer-newsletter .newsletter-form input[type=email] {
-    border: 0;
-    padding: 4px 8px;
-    width: 100%;
-    background-color: var(--surface-color);
-    color: var(--default-color);
-}
-
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
-    outline: none;
-}
-
-.footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 16px;
-    padding: 0 20px 2px 20px;
-    margin: -7px -8px -7px 0;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    transition: 0.3s;
-    border-radius: 50px;
-}
-
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-    background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.footer .copyright {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-}
-
-.footer .copyright p {
-    margin-bottom: 0;
-}
-
-.footer .credits {
-    margin-top: 6px;
-    font-size: 13px;
+.col-lg-2 {
+    flex: 0 0 16.67%;
+    /* Make it take 1/6 of the container width */
+    max-width: 16.67%;
+    /* Set a maximum width */
+    /* Example background color */
+    margin-left: 20px;
+    /* Adjust spacing as needed */
+    padding: 10px;
+    /* Add padding for content spacing */
 }
