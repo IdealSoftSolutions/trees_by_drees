@@ -3,7 +3,7 @@
   <img [src]="headerData.logoUrl" width="70px"/>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
-      <button [routerLink]="item.link" class="menu-items" [disableRipple]="true" routerLinkActive="active" mat-button   
+      <button [routerLink]="item.link" class="menu-items" [disableRipple]="true"  [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" mat-button   
      > {{item.label}}</button>
       }
       <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"  fontIcon="view_headline"></mat-icon>
@@ -22,9 +22,6 @@
         </div>
       </div>
   </div>
-  <button routerLink='/enroll' class="contact mat-success"  mat-button>Enroll Now</button>
-
- 
- 
+  <button routerLink='/enroll' class="contact mat-success"  mat-button>Enroll Today</button>
 </div>
 </div>

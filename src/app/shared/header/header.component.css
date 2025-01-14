@@ -16,9 +16,15 @@ color: white !important;
 .offcanvas-body{
   padding: 0 !important;
 }
-
-
-
+.menu-items {
+  position: relative;
+  /* display: inline-block; */
+  /* padding: 10px 15px; */
+  /* border: none; */
+  background: none;
+  cursor: pointer;
+  /* text-transform: uppercase; */
+}
 
 .menu-items::after {
   content: '';
@@ -31,8 +37,22 @@ color: white !important;
   transition: width 0.5s ease; /* Transition effect */
 }
 
-.active{
+.menu-items.active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
 }
+.menu-items::after {
+  width: 0; /* Full-width underline on hover */
+}
+.menu-items.active::after{
+  width:100%
+}
+
 
 /* On hover, expand the underline */
 .mdc-button:hover::after {

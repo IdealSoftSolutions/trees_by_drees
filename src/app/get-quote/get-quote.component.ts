@@ -21,7 +21,7 @@ import {MatSelectModule} from '@angular/material/select';
 export class GetQuoteFormComponent {
   getAQuoteForm !: FormGroup;
   batchDates: string[] = ['January 15, 2025', 'February 10, 2025', 'March 5, 2025'];
-  serviceList:string[]=['Tree Trimming','Tree Removal','Arborist Consultation','Stump Grinding']
+  serviceList:string[]=['Tree Trimming','Tree Removal','Arborist Consultation','Stump Grinding','Storm Removal']
   submitted=false;
 
   get form(){

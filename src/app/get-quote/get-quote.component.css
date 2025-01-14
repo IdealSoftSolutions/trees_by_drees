@@ -23,7 +23,7 @@
 }
 
 .reservation-area label {
-    color: black !important;
+    color: #F5F5F5  !important;
 }
 
 
@@ -41,7 +41,7 @@
 .reservation-right {
     margin-bottom: 50px;
     /* Adds space below the div */
-    background: white !important;
+    /* background: white !important; */
 }
 
 @media (max-width: 768px) {
