@@ -2,7 +2,7 @@
 
   <div class="overlay-bg"></div>
   <div class="text-center pt-4 mb-4">
-    <h1 class=" d-inline ">Request Your Tree Service Quote</h1>
+    <h1 class=" d-inline ">Reserve Your Spot Today</h1>
   </div>
   <div class="container">
     <div class="row align-items-center">
@@ -21,13 +21,13 @@
         
       </div>
       <div class="col-lg-8 p-5 reservation-right rounded">
-        <form [formGroup]="getAQuoteForm" class="quote-form">
+        <form [formGroup]="enrollForm" class="quote-form">
          
            
 
             <!-- Name Section -->
             <div class="row">
-              <div class="col-sm-4 mb-2">
+              <div class="col-sm-6 mb-2">
                 <label class="mb-1 fw-bold" for="name">First Name*</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50"
@@ -38,7 +38,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-sm-4 mb-2">
+              <div class="col-sm-6 mb-2">
                 <label class="mb-1 fw-bold" for="name">Last Name*</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <input matInput maxlength="50"
@@ -49,7 +49,7 @@
                   </mat-error>
                 </mat-form-field>
               </div>
-              <div class="col-sm-4 mb-2">
+              <div class="col-sm-6 mb-2">
                 <label class="mb-1 fw-bold" for="phone">Phone Number*</label>
                 <mat-form-field appearance="outline" class="w-100">
                   <span matTextPrefix>+1 &nbsp;</span>
@@ -66,60 +66,9 @@
                   <mat-error *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
                 </mat-form-field>
               </div>
-             
-              <div formGroupName="address" class="col-sm-6 mb-2">
-                <label class="mb-1 fw-bold" for="house_no">Appartment/Suit No</label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput maxlength="50" formControlName="house_no" placeholder="Enter Address">
-                </mat-form-field>
-              </div>
-            </div>
-           
-
-            <!-- Address Section -->
-            <div  class="row">
-              <ng-container formGroupName="address">
-              <div class="col-sm-4 mb-2">
-                <label class="mb-1 fw-bold" for="phone">City</label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput maxlength="50" formControlName="city">
-                </mat-form-field>
-              </div>
-              <div class="col-sm-4 mb-2">
-                <label class="mb-1 fw-bold" for="phone">State</label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput maxlength="50" formControlName="state">
-                </mat-form-field>
-              </div>
-              <div class="col-sm-4 mb-2">
-                <label class="mb-1 fw-bold" for="zipcode">Zip code</label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <input matInput (keypress)="numericOnly($event)" maxlength="5" formControlName="zipcode">
-                </mat-form-field>
-              </div>
-            </ng-container>
-              <div class="col-sm-6 mb-2">
-                <label class="mb-1 fw-bold" for="service">Type of Service</label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <mat-select formControlName="service" multiple>
-                    @for (list of serviceList; track list) {
-                    <mat-option [value]="list">{{list}}</mat-option>
-                    }
-                  </mat-select>
-                </mat-form-field>
-              </div>
-              <div class="col-sm-6 mb-2">
-                <label class="mb-1 fw-bold" for="description">Describe what type of services you are looking for.</label>
-                <mat-form-field appearance="outline" class="w-100">
-                  <textarea matInput formControlName="description" cdkTextareaAutosize #autosize="cdkTextareaAutosize"
-                    cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5"></textarea>
-                </mat-form-field>
-              </div>
-           
             </div>
             <div class="text-center">
-              <button (click)="onSubmit()" class="contact w-50 mat-success mt-2" mat-raised-button>Get A
-                Quote</button>
+              <button (click)="onSubmit()" class="contact w-50 mat-success mt-2" mat-raised-button>Submit</button>
             </div>
         </form>
       </div>

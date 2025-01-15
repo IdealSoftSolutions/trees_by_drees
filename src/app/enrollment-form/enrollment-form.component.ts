@@ -19,29 +19,21 @@ import {MatSelectModule} from '@angular/material/select';
   styleUrl: './enrollment-form.component.css'
 })
 export class EnrollmentFormComponent {
-  getAQuoteForm !: FormGroup;
+  enrollForm !: FormGroup;
   batchDates: string[] = ['January 15, 2025', 'February 10, 2025', 'March 5, 2025'];
   serviceList:string[]=['Tree Trimming','Tree Removal','Arborist Consultation','Stump Grinding','Storm Removal']
   submitted=false;
 
   get form(){
-    return this.getAQuoteForm.controls;
+    return this.enrollForm.controls;
   }
 
   constructor(private fb: FormBuilder) {
-    this.getAQuoteForm = this.fb.group({
+    this.enrollForm = this.fb.group({
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email, Validators.pattern('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,8}$')]],
       phone: ['', Validators.required],
-      service: [''],
-      description: [''],
-      address:this.fb.group({
-        house_no:[],
-        city:[{value:'Saint Louis',disabled: true} ],
-        state:[{value:'Missouri',disabled:true}],
-        zipcode:[]
-      })
     });
   }
 
@@ -53,9 +45,9 @@ export class EnrollmentFormComponent {
 
   onSubmit(): void {
     this.submitted=true;
-    console.log('Form Submitted', this.getAQuoteForm.value);
-    if (this.getAQuoteForm.valid) {
-      console.log('Form Submitted', this.getAQuoteForm.value);
+    console.log('Form Submitted', this.enrollForm.value);
+    if (this.enrollForm.valid) {
+      console.log('Form Submitted', this.enrollForm.value);
       alert('Thank you for enrolling!');
     }
   }
