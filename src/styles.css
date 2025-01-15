@@ -113,3 +113,56 @@ input::placeholder {
   font-size: 12px !important;
 }
 }
+
+.relative {
+  position: relative;
+}
+
+.overlay-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 22, 24, 0.75);
+  z-index: 0;
+  /* Ensure it sits below the content */
+}
+
+.reservation-area .container,
+.reservation-area h1 {
+  position: relative;
+  z-index: 1;
+  color: white !important;
+  /* Place content above the overlay */
+}
+
+.reservation-area h1 {
+  border-bottom: 3px solid #43a047;
+}
+
+.reservation-area label {
+  color: #F5F5F5  !important;
+}
+
+
+
+.reservation-area {
+  background: url("/assets/images/quote-image.jpeg") no-repeat center/cover;
+  position: relative;
+  /* color: WHITE !important; */
+}
+
+.reservation-left {
+  color: white !important;
+}
+
+.reservation-right {
+  margin-bottom: 50px;
+  /* Adds space below the div */
+  /* background: white !important; */
+}
+
+@media (max-width: 768px) {
+  .reservation-right {
+      margin-bottom: 15px;
+      /* Adjust for smaller screens */
+  }
+}
