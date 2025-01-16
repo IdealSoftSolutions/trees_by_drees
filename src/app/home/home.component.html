@@ -1,26 +1,80 @@
-<!-- <div class="row container m-auto my-3">
-    @for (item of [1,2,3]; track $index) {
-        <div class="col-md-4"> 
-        <mat-card class="example-card " appearance="outlined">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-              <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
+<!-- Main Content Section -->
+<div id="main-content">
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 class="display-4 fw-bold">Expert Tree Services You Can Trust</h1>
+    <p class="lead mb-4">Professional tree care for safety and beauty.</p>
+    <a href="enroll" class="btn"
+      style="background-color: white; color: black; border: 2px solid black; font-size: 16px; font-weight: bold; text-decoration: none; display: inline-block; border-radius: 4px;">
+      Enroll Now
+    </a>
+  </div>
+
+  <!-- Welcome Section -->
+  <div class="container mt-5">
+    <div>
+      <h2>Welcome to Trees by Drees</h2>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="/assets/images/home4.jpeg" alt="Arborist Training" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h4>Expert Tree Care Services</h4>
+        <p>At Drees, we specialize in providing top-notch tree care services. Our team of certified arborists ensures
+          the health and beauty of your trees, enhancing your landscape's appeal.</p>
+        <ul>
+          <li>Comprehensive tree care tutorials</li>
+          <li>Hands-on training sessions</li>
+          <li>Expert guidance and mentorship</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Section -->
+  <div class="container mt-5">
+    <h2>Explore our stunning tree transformations and services at Drees – where nature meets expertise!
+    </h2>
+    <div class="gallery-container" style="position: relative; width: 100%; max-width: 600px; overflow: hidden;">
+      <div class="gallery-images" style="display: flex; transition: transform 0.3s ease;">
+        <img src="/assets/images/home4.jpeg" alt="Gallery Image 1" class="gallery-image"
+          style="width: 100%; object-fit: cover; border-radius: 5px;">
+        <img src="/assets/images/home4.jpeg" alt="Gallery Image 2" class="gallery-image"
+          style="width: 100%; object-fit: cover; border-radius: 5px;">
+        <img src="/assets/images/home4.jpeg" alt="Gallery Image 3" class="gallery-image"
+          style="width: 100%; object-fit: cover; border-radius: 5px;">
+        <img src="/assets/images/home4.jpeg" alt="Gallery Image 4" class="gallery-image"
+          style="width: 100%; object-fit: cover; border-radius: 5px;">
+        <img src="/assets/images/home4.jpeg" alt="Gallery Image 5" class="gallery-image"
+          style="width: 100%; object-fit: cover; border-radius: 5px;">
+      </div>
+      <!-- Navigation Arrows -->
+      <button class="prev" onclick="moveSlide(-1)"
+        style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; font-size: 18px; cursor: pointer;">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)"
+        style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.5); color: white; border: none; padding: 10px; font-size: 18px; cursor: pointer;">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+<!-- JavaScript for the Carousel -->
+<script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.gallery-image');
+  const totalImages = images.length;
+
+  function moveSlide(direction) {
+    currentIndex += direction;
+
+    // Loop back to the first or last image
+    if (currentIndex >= totalImages) {
+      currentIndex = 0;
+    } else if (currentIndex < 0) {
+      currentIndex = totalImages - 1;
     }
-</div> -->
-<h1>This page is still in development</h1>
+
+    // Move the image container to show the correct image
+    document.querySelector('.gallery-images').style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+</script>
