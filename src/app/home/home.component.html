@@ -1,63 +1,81 @@
-<section class="hero">
-  <div class="hero-text">
-    <h1>Welcome to Our Tree Service</h1>
-    <p>Your expert tree trimming, removal, and arborist training team.</p>
-    <button mat-button class="btn-primary">Get Started</button>
+<div class="container py-5">
+  <!-- Hero Section -->
+  <div class="hero-section text-center text-white">
+    <h1 class="display-4 fw-bold">Your Trusted Tree Experts</h1>
+    <p class="lead mb-4">Professional Tree Trimming, Removal & Arborist Services</p>
+    <a href="#services" class="btn btn-primary btn-lg rounded-pill">Explore Our Services</a>
   </div>
-</section>
 
-<section class="services">
-  <mat-card class="service-card">
-    <mat-card-header>
-      <mat-card-title>Tree Trimming</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>Our certified arborists provide professional tree trimming services to maintain the health and beauty of your
-        trees. Proper trimming can enhance the aesthetic appeal of your property and promote healthier growth.</p>
-      <button mat-button class="btn-secondary">Learn More</button>
-    </mat-card-content>
-  </mat-card>
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <h2 class="text-center mb-5 display-4 fw-bold">Our Services</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card service-card h-100 shadow-sm border-0 rounded">
+          <img src="/assets/images/tree-trimming.jpg" class="card-img-top" alt="Tree Trimming">
+          <div class="card-body">
+            <h5 class="card-title">Tree Trimming</h5>
+            <p class="card-text">Expert trimming services to keep your trees healthy and looking great all year long.
+            </p>
+            <a href="#" class="btn btn-primary stretched-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100 shadow-sm border-0 rounded">
+          <img src="/assets/images/tree-removal.jpg" class="card-img-top" alt="Tree Removal">
+          <div class="card-body">
+            <h5 class="card-title">Tree Removal</h5>
+            <p class="card-text">Safe and efficient tree removal, even in difficult spots. Let us handle the heavy
+              lifting.</p>
+            <a href="#" class="btn btn-primary stretched-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card service-card h-100 shadow-sm border-0 rounded">
+          <img src="/assets/images/arborist-training.jpg" class="card-img-top" alt="Arborist Training">
+          <div class="card-body">
+            <h5 class="card-title">Arborist Training</h5>
+            <p class="card-text">Training the next generation of arborists. Comprehensive and hands-on education.</p>
+            <a href="#" class="btn btn-primary stretched-link">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <mat-card class="service-card">
-    <mat-card-header>
-      <mat-card-title>Tree Removal</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>When trees become dangerous or diseased, safe removal is essential. Our team is skilled in removing trees of
-        all sizes with minimal disruption to your landscape. Trust us for safe, efficient tree removal.</p>
-      <button mat-button class="btn-secondary">Learn More</button>
-    </mat-card-content>
-  </mat-card>
+  <!-- Testimonials Section -->
+  <section class="py-5 bg-light">
+    <h2 class="text-center mb-5 display-4 fw-bold">What Our Clients Say</h2>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="testimonial-card p-4 rounded shadow-sm bg-white">
+          <p class="fs-5">"The team did a fantastic job removing our trees safely and efficiently. Highly recommend!"
+          </p>
+          <footer class="blockquote-footer">John Doe <cite title="Source Title">Homeowner</cite></footer>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="testimonial-card p-4 rounded shadow-sm bg-white">
+          <p class="fs-5">"Amazing arborist training. I feel fully equipped to handle any tree care task."</p>
+          <footer class="blockquote-footer">Jane Smith <cite title="Source Title">Certified Arborist</cite></footer>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="testimonial-card p-4 rounded shadow-sm bg-white">
+          <p class="fs-5">"Very professional service. Our trees look fantastic, and the team was very careful."</p>
+          <footer class="blockquote-footer">Sarah Lee <cite title="Source Title">Business Owner</cite></footer>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <mat-card class="service-card">
-    <mat-card-header>
-      <mat-card-title>Arborist Training</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>Want to become a skilled arborist? Our comprehensive training programs teach you everything from tree care and
-        maintenance to safety standards and equipment handling. Start your career as an arborist today!</p>
-      <button mat-button class="btn-secondary">Learn More</button>
-    </mat-card-content>
-  </mat-card>
-</section>
-
-<section class="why-choose-us">
-  <h2>Why Choose Us?</h2>
-  <ul>
-    <li><strong>Experienced Arborists:</strong> We have years of experience in tree trimming and removal, as well as
-      training the next generation of arborists.</li>
-    <li><strong>Safety First:</strong> Our top priority is safety. We follow industry best practices and maintain a safe
-      working environment at all times.</li>
-    <li><strong>Customized Solutions:</strong> Every tree and property is unique. We provide tailored services to meet
-      your specific needs and budget.</li>
-    <li><strong>Customer Satisfaction:</strong> We pride ourselves on our customer service and ensuring our clients are
-      happy with every job we do.</li>
-  </ul>
-</section>
-
-<section class="call-to-action">
-  <h2>Request a Quote</h2>
-  <p>Looking to get a quote for tree trimming or removal? Our team is here to help. We provide free, no-obligation
-    quotes based on your specific needs.</p>
-  <button mat-button class="btn-primary">Get Your Free Quote</button>
-</section>
+  <!-- Call to Action -->
+  <section class="cta-section text-center text-white" style="background-color: #1abc9c;">
+    <h2 class="fw-bold mb-4">Get Your Free Quote Today!</h2>
+    <p class="mb-4">Reach out for a personalized quote based on your tree service needs. We offer free, no-obligation
+      assessments!</p>
+    <a href="#quote" class="btn btn-light btn-lg rounded-pill">Request a Quote</a>
+  </section>
+</div>
