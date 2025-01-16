@@ -1,25 +1,63 @@
-<div class="row container m-auto my-3">
-    @for (item of [1,2,3]; track $index) {
-        <div class="col-md-4"> 
-        <mat-card class="example-card " appearance="outlined">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-            <mat-card-content>
-              <p>
-                The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-                A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-                bred for hunting.
-              </p>
-            </mat-card-content>
-            <mat-card-actions>
-              <button mat-button>LIKE</button>
-              <button mat-button>SHARE</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-    }
-</div>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Welcome to Our Tree Service</h1>
+    <p>Your expert tree trimming, removal, and arborist training team.</p>
+    <button mat-button class="btn-primary">Get Started</button>
+  </div>
+</section>
+
+<section class="services">
+  <mat-card class="service-card">
+    <mat-card-header>
+      <mat-card-title>Tree Trimming</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Our certified arborists provide professional tree trimming services to maintain the health and beauty of your
+        trees. Proper trimming can enhance the aesthetic appeal of your property and promote healthier growth.</p>
+      <button mat-button class="btn-secondary">Learn More</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="service-card">
+    <mat-card-header>
+      <mat-card-title>Tree Removal</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>When trees become dangerous or diseased, safe removal is essential. Our team is skilled in removing trees of
+        all sizes with minimal disruption to your landscape. Trust us for safe, efficient tree removal.</p>
+      <button mat-button class="btn-secondary">Learn More</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="service-card">
+    <mat-card-header>
+      <mat-card-title>Arborist Training</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Want to become a skilled arborist? Our comprehensive training programs teach you everything from tree care and
+        maintenance to safety standards and equipment handling. Start your career as an arborist today!</p>
+      <button mat-button class="btn-secondary">Learn More</button>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section class="why-choose-us">
+  <h2>Why Choose Us?</h2>
+  <ul>
+    <li><strong>Experienced Arborists:</strong> We have years of experience in tree trimming and removal, as well as
+      training the next generation of arborists.</li>
+    <li><strong>Safety First:</strong> Our top priority is safety. We follow industry best practices and maintain a safe
+      working environment at all times.</li>
+    <li><strong>Customized Solutions:</strong> Every tree and property is unique. We provide tailored services to meet
+      your specific needs and budget.</li>
+    <li><strong>Customer Satisfaction:</strong> We pride ourselves on our customer service and ensuring our clients are
+      happy with every job we do.</li>
+  </ul>
+</section>
+
+<section class="call-to-action">
+  <h2>Request a Quote</h2>
+  <p>Looking to get a quote for tree trimming or removal? Our team is here to help. We provide free, no-obligation
+    quotes based on your specific needs.</p>
+  <button mat-button class="btn-primary">Get Your Free Quote</button>
+</section>
