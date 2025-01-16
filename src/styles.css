@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -10,7 +10,7 @@ h1 {
 }
 
 .mat-mdc-button:not(:disabled) {
-  color: black !important;
+  color: white !important;
 }
 
 .mat-mdc-menu-panel {
@@ -18,7 +18,7 @@ h1 {
 }
 
 .mat-mdc-raised-button:not(:disabled) {
-  color: black !important;
+  color: white !important;
 }
 
 mat-icon {
@@ -77,13 +77,13 @@ label{
   padding-bottom: 8px !important;
 }
 .mdc-list-item__primary-text{
-  color: black !important;
+  color: white !important;
 }
 .mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked{
  background: linear-gradient(45deg, #66bb6a, #43a047) !important;
 }
 .mat-mdc-form-field-text-prefix{
-  color: black !important;
+  color: white !important;
 }
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{
   border-color: #B2D8B2 !important;
@@ -121,7 +121,7 @@ input::placeholder {
 .overlay-bg {
   position: absolute;
   inset: 0;
-  background: rgba(17, 22, 24, 0.75);
+  background: rgba(17, 22, 24, 0.9);
   z-index: 0;
   /* Ensure it sits below the content */
 }
@@ -159,6 +159,13 @@ input::placeholder {
   /* Adds space below the div */
   /* background: white !important; */
 }
+
+/* .sticky-header {
+  position: sticky;
+  position: -webkit-sticky; 
+  top: 0;
+  z-index: 10; 
+} */
 
 @media (max-width: 768px) {
   .reservation-right {

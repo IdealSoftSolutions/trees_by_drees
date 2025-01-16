@@ -33,7 +33,7 @@ color: white !important;
   bottom: 0;
   width: 0;
   height: 2px; /* Thickness of the underline */
-  background-color: black; /* Underline color */
+  background-color: white; /* Underline color */
   transition: width 0.5s ease; /* Transition effect */
 }
 
@@ -43,7 +43,7 @@ color: white !important;
   left: 0;
   bottom: 0;
   height: 2px;
-  background-color: black;
+  background-color: white;
   transition: width 0.3s ease;
 }
 .menu-items::after {
