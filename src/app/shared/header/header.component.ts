@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
     menu: [
       { label: 'Home', link: '/', subMenu: [] },
       {
-        label: 'Gallery',
+        label: 'Shop',
         link: '#',
        
       },

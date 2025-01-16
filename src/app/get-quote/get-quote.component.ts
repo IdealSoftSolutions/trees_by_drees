@@ -8,10 +8,11 @@ import { CommonModule } from '@angular/common';
 import {NgxMaskDirective, provideNgxMask} from 'ngx-mask'
 import { MatIconModule } from '@angular/material/icon';
 import {MatSelectModule} from '@angular/material/select';
+import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
   selector: 'app-get-quote',
-  imports: [CommonModule,MatFormFieldModule, MatRadioModule,MatSelectModule, ReactiveFormsModule, MatInputModule,MatButtonModule,MatIconModule, NgxMaskDirective],
+  imports: [CommonModule, MatFormFieldModule, MatRadioModule, MatSelectModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatIconModule, NgxMaskDirective, HeaderComponent],
   providers: [
     provideNgxMask(),
 ],
