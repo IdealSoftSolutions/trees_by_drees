@@ -2,11 +2,16 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
-h1 {
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family:"League Spartan", arial, helvetica, sans-serif;
+}
+
+.heading{
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .mat-mdc-button:not(:disabled) {
@@ -38,29 +43,9 @@ mat-icon {
 }
 
 
-.mat-success {
-  background: linear-gradient(45deg, #66bb6a, #43a047) !important;
-  /* Gradient from lighter to darker green */
-  color: white !important;
-  border: none !important;
-  /* Optional: Ensure no borders interfere */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2) !important;
-  /* Optional: Add a subtle shadow for depth */
-  transition: transform 0.2s, box-shadow 0.2s !important;
-  /* Optional: Smooth hover effects */
-}
 
-.mat-success:hover {
-  transform: translateY(-2px) !important;
-  /* Slight lift on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3) !important;
-  /* More prominent shadow on hover */
-}
 
-.mat-success.mat-mdc-button:not(:disabled),
-.mat-success.mat-mdc-raised-button:not(:disabled) {
-  color: white !important;
-}
+
 
 .reservation-area{
 
@@ -90,7 +75,7 @@ label{
 }
 
  .mdc-text-field__input {
-  color: white !important;
+  /* color: white !important; */
 }
 
 .mat-mdc-select {
@@ -121,22 +106,18 @@ input::placeholder {
 .overlay-bg {
   position: absolute;
   inset: 0;
-  background: rgba(17, 22, 24, 0.9);
+  /* background: rgba(17, 22, 24, 0.9); */
   z-index: 0;
   /* Ensure it sits below the content */
 }
 
-.reservation-area .container,
-.reservation-area h1 {
-  position: relative;
-  z-index: 1;
-  color: white !important;
-  /* Place content above the overlay */
+.about h1{
+  color: #a6907c;
 }
 
-.reservation-area h1 {
-  border-bottom: 3px solid #43a047;
-}
+
+
+
 
 .reservation-area label {
   color: #F5F5F5  !important;
@@ -145,9 +126,12 @@ input::placeholder {
 
 
 .reservation-area {
-  background: url("/assets/images/quote-image.jpeg") no-repeat center/cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%), url('assets/images/banner.webp');
   position: relative;
-  /* color: WHITE !important; */
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image by default */
+  color: white !important;
 }
 
 .reservation-left {
