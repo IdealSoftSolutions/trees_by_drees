@@ -111,8 +111,14 @@ input::placeholder {
   /* Ensure it sits below the content */
 }
 
-.about h1{
+
+ .section h1{
   color: #a6907c;
+}
+.line-border{
+  border-top: 5px solid #a6907c;
+  width: 63px;
+  margin: auto;
 }
 
 
