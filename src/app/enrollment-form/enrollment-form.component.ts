@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { HttpClient } from '@angular/common/http'; // Import HttpClient
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
@@ -13,10 +13,22 @@ import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
   selector: 'app-enrollment-form',
-  imports: [CommonModule, MatFormFieldModule, MatRadioModule, MatSelectModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatIconModule, NgxMaskDirective, HeaderComponent],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatSelectModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    NgxMaskDirective,
+    HeaderComponent
+  ],
   providers: [provideNgxMask()],
   templateUrl: './enrollment-form.component.html',
-  styleUrls: ['./enrollment-form.component.css'] // Fixed typo
+  styleUrls: ['./enrollment-form.component.css']
 })
 export class EnrollmentFormComponent {
   enrollForm!: FormGroup;
@@ -28,7 +40,7 @@ export class EnrollmentFormComponent {
     return this.enrollForm.controls;
   }
 
-  constructor(private fb: FormBuilder, private http: HttpClient) { // Inject HttpClient
+  constructor(private fb: FormBuilder, private http: HttpClient) {
     this.enrollForm = this.fb.group({
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
