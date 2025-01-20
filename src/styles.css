@@ -47,7 +47,7 @@ mat-icon {
 
 
 
-.reservation-area{
+.form-page{
 
 .mdc-text-field__input {
   font-size: 14px !important;
@@ -70,6 +70,9 @@ label{
 .mat-mdc-form-field-text-prefix{
   color: white !important;
 }
+.mat-mdc-form-field-icon-prefix{
+  color: black !important;
+}
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{
   border-color: #B2D8B2 !important;
 }
@@ -78,23 +81,23 @@ label{
   /* color: white !important; */
 }
 
-.mat-mdc-select {
+/* .mat-mdc-select {
   color:white !important;
 }
 .mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
   color: white !important;
-}
+} */
 
 input::placeholder {
-  color: white !important;
+  /* color: white !important; */
   font-size: 12px !important;
   overflow: hidden !important;
 }
 .mat-icon {
-  color: white !important;
+  color: black !important;
 }
 .mat-mdc-form-field-text-prefix{
-  color: white !important;
+  color: black !important;
   font-size: 12px !important;
 }
 }
@@ -109,6 +112,9 @@ input::placeholder {
   /* background: rgba(17, 22, 24, 0.9); */
   z-index: 0;
   /* Ensure it sits below the content */
+}
+ .mat-icon{
+  color: white !important;
 }
 
 
@@ -130,9 +136,6 @@ input::placeholder {
   }
 }
 
-.reservation-area label {
-  color: #F5F5F5  !important;
-}
 
 .reservation-area {
   background-image: linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%), url('assets/images/banner.webp');
