@@ -121,15 +121,18 @@ input::placeholder {
   margin: auto;
 }
 
-
-
-
+.submit {
+  .mat-mdc-button-persistent-ripple{
+  background: black !important;
+  }
+  .mdc-button__label{
+    color: white !important;
+  }
+}
 
 .reservation-area label {
   color: #F5F5F5  !important;
 }
-
-
 
 .reservation-area {
   background-image: linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%), url('assets/images/banner.webp');
@@ -140,9 +143,7 @@ input::placeholder {
   color: white !important;
 }
 
-.reservation-left {
-  color: white !important;
-}
+
 
 .reservation-right {
   margin-bottom: 50px;
@@ -150,12 +151,14 @@ input::placeholder {
   /* background: white !important; */
 }
 
-/* .sticky-header {
-  position: sticky;
-  position: -webkit-sticky; 
-  top: 0;
-  z-index: 10; 
-} */
+.form-page{
+  .header{
+    background: black !important;
+    color: white !important
+  }
+  background: #f4e1cf !important  ;
+  color: black !important;
+}
 
 @media (max-width: 768px) {
   .reservation-right {
