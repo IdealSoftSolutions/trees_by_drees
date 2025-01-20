@@ -47,7 +47,7 @@ mat-icon {
 
 
 
-.reservation-area{
+.form-page{
 
 .mdc-text-field__input {
   font-size: 14px !important;
@@ -70,6 +70,9 @@ label{
 .mat-mdc-form-field-text-prefix{
   color: white !important;
 }
+.mat-mdc-form-field-icon-prefix{
+  color: black !important;
+}
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{
   border-color: #B2D8B2 !important;
 }
@@ -78,23 +81,23 @@ label{
   /* color: white !important; */
 }
 
-.mat-mdc-select {
+/* .mat-mdc-select {
   color:white !important;
 }
 .mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
   color: white !important;
-}
+} */
 
 input::placeholder {
-  color: white !important;
+  /* color: white !important; */
   font-size: 12px !important;
   overflow: hidden !important;
 }
 .mat-icon {
-  color: white !important;
+  color: black !important;
 }
 .mat-mdc-form-field-text-prefix{
-  color: white !important;
+  color: black !important;
   font-size: 12px !important;
 }
 }
@@ -110,6 +113,9 @@ input::placeholder {
   z-index: 0;
   /* Ensure it sits below the content */
 }
+ .mat-icon{
+  color: white !important;
+}
 
 
  .section h1{
@@ -121,14 +127,14 @@ input::placeholder {
   margin: auto;
 }
 
-
-
-
-
-.reservation-area label {
-  color: #F5F5F5  !important;
+.submit {
+  .mat-mdc-button-persistent-ripple{
+  background: black !important;
+  }
+  .mdc-button__label{
+    color: white !important;
+  }
 }
-
 
 
 .reservation-area {
@@ -140,9 +146,7 @@ input::placeholder {
   color: white !important;
 }
 
-.reservation-left {
-  color: white !important;
-}
+
 
 .reservation-right {
   margin-bottom: 50px;
@@ -150,12 +154,14 @@ input::placeholder {
   /* background: white !important; */
 }
 
-/* .sticky-header {
-  position: sticky;
-  position: -webkit-sticky; 
-  top: 0;
-  z-index: 10; 
-} */
+.form-page{
+  .header{
+    background: black !important;
+    color: white !important
+  }
+  background: #f4e1cf !important  ;
+  color: black !important;
+}
 
 @media (max-width: 768px) {
   .reservation-right {
