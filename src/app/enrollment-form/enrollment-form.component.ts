@@ -1,35 +1,34 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http'; // Import HttpClient
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
-import {NgxMaskDirective, provideNgxMask} from 'ngx-mask'
 import { MatIconModule } from '@angular/material/icon';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
   selector: 'app-enrollment-form',
   imports: [CommonModule, MatFormFieldModule, MatRadioModule, MatSelectModule, ReactiveFormsModule, MatInputModule, MatButtonModule, MatIconModule, NgxMaskDirective, HeaderComponent],
-  providers: [
-    provideNgxMask(),
-],
+  providers: [provideNgxMask()],
   templateUrl: './enrollment-form.component.html',
-  styleUrl: './enrollment-form.component.css'
+  styleUrls: ['./enrollment-form.component.css'] // Fixed typo
 })
 export class EnrollmentFormComponent {
-  enrollForm !: FormGroup;
+  enrollForm!: FormGroup;
   batchDates: string[] = ['January 15, 2025', 'February 10, 2025', 'March 5, 2025'];
-  serviceList:string[]=['Tree Trimming','Tree Removal','Arborist Consultation','Stump Grinding','Storm Removal']
-  submitted=false;
+  serviceList: string[] = ['Tree Trimming', 'Tree Removal', 'Arborist Consultation', 'Stump Grinding', 'Storm Removal'];
+  submitted = false;
 
-  get form(){
+  get form() {
     return this.enrollForm.controls;
   }
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) { // Inject HttpClient
     this.enrollForm = this.fb.group({
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
@@ -38,21 +37,27 @@ export class EnrollmentFormComponent {
     });
   }
 
-  numericOnly(event: { key: string; }) {
-    let patt = /^([0-9])$/;
-    let result = patt.test(event.key);
-    return result;
+  numericOnly(event: { key: string }) {
+    const patt = /^[0-9]$/;
+    return patt.test(event.key);
   }
 
   onSubmit(): void {
-    this.submitted=true;
-    console.log('Form Submitted', this.enrollForm.value);
+    this.submitted = true;
     if (this.enrollForm.valid) {
       console.log('Form Submitted', this.enrollForm.value);
-      alert('Thank you for enrolling!');
+
+      // Send email logic
+      this.http.post('/api/send-email', this.enrollForm.value)
+        .subscribe({
+          next: (response) => {
+            alert('Thank you for enrolling! Confirmation email has been sent.');
+          },
+          error: (err) => {
+            console.error('Error sending email:', err);
+            alert('Something went wrong while sending your email. Please try again.');
+          }
+        });
     }
   }
 }
-
-
-
