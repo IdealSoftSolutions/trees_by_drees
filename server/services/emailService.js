@@ -21,7 +21,7 @@ const sendEmail = async (data) => {
       <p><strong>Phone:</strong> ${data.phone}</p>
     `,
     };
-
+    console.info("Using transporter sending email")
     await transporter.sendMail(mailOptions);
 };
 

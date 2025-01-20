@@ -59,17 +59,18 @@ export class EnrollmentFormComponent {
     if (this.enrollForm.valid) {
       console.log('Form Submitted', this.enrollForm.value);
 
-      // Send email logic
-      this.http.post('/api/send-email', this.enrollForm.value)
+      // Updated API URL pointing to the backend server
+      this.http.post('http://localhost:3000/api/send-email', this.enrollForm.value)
         .subscribe({
           next: (response) => {
-            alert('Thank you for enrolling! Confirmation email has been sent.');
+            alert('Thank you for enrolling! A confirmation email has been sent.');
           },
           error: (err) => {
             console.error('Error sending email:', err);
-            alert('Something went wrong while sending your email. Please try again.');
+            alert('Failed to send the email. Please try again later.');
           }
         });
     }
   }
+
 }
