@@ -60,7 +60,7 @@ export class EnrollmentFormComponent {
       console.log('Form Submitted', this.enrollForm.value);
 
       // Updated API URL pointing to the backend server
-      this.http.post('http://localhost:3000/api/send-email', this.enrollForm.value)
+      this.http.post('http://localhost:3000/api/send-training-enrollment', this.enrollForm.value)
         .subscribe({
           next: (response) => {
             alert('Thank you for enrolling! A confirmation email has been sent.');
