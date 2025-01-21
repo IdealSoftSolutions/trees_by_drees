@@ -1,6 +1,6 @@
 
 <div class="d-flex align-items-center pt-2 justify-content-between container header">
-  <h3 class="heading">Trees By Drees</h3>
+  <h3 >Trees By Drees</h3>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
       <button [routerLink]="item.link" class="menu-items" [disableRipple]="true"  [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" mat-button   
@@ -10,7 +10,7 @@
 
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header justify-content-end">
-          <mat-icon data-bs-dismiss="offcanvas"  aria-label="Close" fontIcon="close"></mat-icon>
+          <mat-icon data-bs-dismiss="offcanvas"   aria-label="Close" fontIcon="close"></mat-icon>
         </div>
         <div class="offcanvas-body">
           <mat-list role="list">
