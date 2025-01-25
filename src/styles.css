@@ -133,6 +133,10 @@ input::placeholder {
   color: white !important;
 }
 
+.cursor-pointer{
+ cursor: pointer;
+}
+
 
 
 .reservation-right {

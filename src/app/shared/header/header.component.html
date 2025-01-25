@@ -1,6 +1,6 @@
 
 <div class="d-flex align-items-center pt-2 justify-content-between container header">
-  <h3 >Trees By Drees</h3>
+  <h3 routerLink="/" class="cursor-pointer">Trees By Drees</h3>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
       <button [routerLink]="item.link" class="menu-items" [disableRipple]="true"  [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" mat-button   
