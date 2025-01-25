@@ -145,6 +145,19 @@ input::placeholder {
   /* background: white !important; */
 }
 
+.mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mdc-checkbox__ripple {
+  opacity: var(--mdc-checkbox-selected-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity));
+  background-color:black !important
+}
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+
 .form-page{
   .header{
     background: black !important;

@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
@@ -24,6 +25,7 @@ import { HeaderComponent } from "../shared/header/header.component";
     MatButtonModule,
     MatIconModule,
     NgxMaskDirective,
+    MatCheckboxModule,
     HeaderComponent
   ],
   providers: [provideNgxMask()],
@@ -46,6 +48,7 @@ export class EnrollmentFormComponent {
       last_name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email, Validators.pattern('^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{1,8}$')]],
       phone: ['', Validators.required],
+      isShop:[false]
     });
   }
 

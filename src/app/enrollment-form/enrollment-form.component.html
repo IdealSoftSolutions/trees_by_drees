@@ -64,9 +64,12 @@
                   <mat-error *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
                 </mat-form-field>
               </div>
+              <div class="col-sm-6 mb-2">
+                <mat-checkbox formControlName="isShop" class="example-margin">I am interested in purchasing gear related to arboriculture</mat-checkbox>
+              </div>
             </div>
             <div class="text-center">
-              <button (click)="onSubmit()" class="contact w-50 mat-success mt-2 submit" mat-raised-button>Submit</button>
+              <button (click)="onSubmit()" class="contact w-50 mat-success mt-2 submit" mat-raised-button>{{form['isShop'].value?'Go To Shop':'Enroll'}}</button>
             </div>
         </form>
       </div>
