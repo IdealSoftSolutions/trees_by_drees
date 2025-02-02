@@ -1,27 +1,27 @@
-
 <div class="d-flex align-items-center pt-2 justify-content-between container header">
-  <h3 routerLink="/" class="cursor-pointer">Trees By Drees</h3>
+  <h3 routerLink="/" class="cursor-pointer">Arbor Certs USA</h3>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
-      <button [routerLink]="item.link" class="menu-items" [disableRipple]="true"  [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" mat-button   
-     > {{item.label}}</button>
-      }
-      <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"  fontIcon="view_headline"></mat-icon>
+    <button [routerLink]="item.link" class="menu-items" [disableRipple]="true"
+      [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" mat-button> {{item.label}}</button>
+    }
+    <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasRight" fontIcon="view_headline"></mat-icon>
 
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header justify-content-end">
-          <mat-icon data-bs-dismiss="offcanvas"   aria-label="Close" fontIcon="close"></mat-icon>
-        </div>
-        <div class="offcanvas-body">
-          <mat-list role="list">
-            @for (item of headerData.menu; track item.label) {
-            <mat-list-item role="listitem">{{item.label}}</mat-list-item>
-            <hr/>
-            }
-          </mat-list>
-        </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header justify-content-end">
+        <mat-icon data-bs-dismiss="offcanvas" aria-label="Close" fontIcon="close"></mat-icon>
       </div>
+      <div class="offcanvas-body">
+        <mat-list role="list">
+          @for (item of headerData.menu; track item.label) {
+          <mat-list-item role="listitem">{{item.label}}</mat-list-item>
+          <hr />
+          }
+        </mat-list>
+      </div>
+    </div>
   </div>
- 
- 
+
+
 </div>

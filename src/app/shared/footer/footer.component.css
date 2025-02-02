@@ -1,0 +1,9 @@
+.footer-logo {
+    width: auto;
+    /* Maintain original aspect ratio */
+    height: 60px;
+    /* Adjust height only */
+    object-fit: contain;
+    /* Ensures the image is not stretched */
+    image-rendering: crisp-edges;
+}
