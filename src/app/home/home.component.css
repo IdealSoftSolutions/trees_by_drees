@@ -1,0 +1,8 @@
+.carousel-image {
+    max-width: 100%;
+    /* Adjust the percentage to your preferred size */
+    max-height: 550px;
+    /* Adjust the height as needed */
+    object-fit: cover;
+    /* Ensures the images fit nicely within the dimensions */
+}

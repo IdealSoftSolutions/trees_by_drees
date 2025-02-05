@@ -1,0 +1,78 @@
+<section class="form-page section-gap relative">
+  <div class="container-fluid header">
+    <app-header></app-header>
+    <hr/>
+  </div>
+  <div class="text-center pt-4 mb-4">
+    <h1 class=" d-inline ">Reserve Your Spot Today</h1>
+  </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 reservation-left">
+        <div>
+          <h3> Welcome to Our Arborist Training</h3>
+          <p class="">
+            Are you ready to start a rewarding career in arboriculture? Our Arborist Training Program is the perfect stepping stone to becoming a certified professional in tree care. With expert instructors, hands-on learning, and a curriculum designed to prepare you for real-world challenges, you’ll gain the skills needed to succeed in this growing field.
+        </div>
+        
+       
+        
+      </div>
+      <div class="col-lg-8 p-5 reservation-right rounded">
+        <form [formGroup]="enrollForm" class="quote-form">
+         
+           
+
+            <!-- Name Section -->
+            <div class="row">
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="name">First Name*</label>
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput maxlength="50"
+                    oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')"
+                    formControlName="first_name" placeholder="Enter your first name" required>
+                  <mat-error class="fs-11 fw-normal" *ngIf="submitted && form?.['first_name']?.errors">First name is
+                    required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="name">Last Name*</label>
+                <mat-form-field appearance="outline" class="w-100">
+                  <input matInput maxlength="50"
+                    oninput="this.value = this.value.replace(/[^A-Za-z0-9-,.;'&/.() ]|^ /g,'')"
+                    formControlName="last_name" placeholder="Enter your last name" required>
+                  <mat-error class="fs-11 fw-normal" *ngIf="submitted && form?.['last_name']?.errors">Last name is
+                    required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="phone">Phone Number*</label>
+                <mat-form-field appearance="outline" class="w-100">
+                  <span matTextPrefix>+1 &nbsp;</span>
+                  <input matInput (keypress)="numericOnly($event)" mask="(000) 000-0000" formControlName="phone"
+                    placeholder="Enter Phone Number" required>
+                  <mat-error *ngIf="submitted && form?.['phone']?.errors">Phone Number is required</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6 mb-2">
+                <label class="mb-1 fw-bold" for="email">Email Address*</label>
+                <mat-form-field appearance="outline" class="w-100 d-flex">
+                  <input matInput formControlName="email" placeholder="Enter Email Address" required>
+                  <mat-icon  fontIcon="email" matPrefix></mat-icon>
+                  <mat-error *ngIf="submitted && form?.['email']?.errors">Please enter valid Email Address</mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col-sm-6 mb-2">
+                <mat-checkbox formControlName="isShop" class="example-margin">I am interested in purchasing gear related to arboriculture</mat-checkbox>
+              </div>
+            </div>
+            <div class="text-center">
+              <button (click)="onSubmit()" class="contact w-50 mat-success mt-2 submit" mat-raised-button>{{form['isShop'].value?'Go To Shop':'Enroll'}}</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

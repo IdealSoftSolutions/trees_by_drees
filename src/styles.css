@@ -1,23 +1,185 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
-h1 {
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family:"League Spartan", arial, helvetica, sans-serif;
 }
-.mat-mdc-button:not(:disabled){
-    color:  black!important;
+
+
+
+.mat-mdc-button:not(:disabled) {
+  color: white !important;
 }
-.mat-mdc-menu-panel{
-    background: white !important;
+
+.mat-mdc-menu-panel {
+  background: white !important;
 }
-.mat-mdc-raised-button:not(:disabled){
-    color: black !important;
+
+.mat-mdc-raised-button:not(:disabled) {
+  color: white !important;
 }
-mat-icon{
+
+mat-icon {
   cursor: pointer;
 }
 
+.offcanvas-body .mdc-list-item__primary-text {
+  color: white !important;
+  cursor: pointer;
+}
+
+.mat-mdc-form-field-infix {
+  min-height: 30px !important;
+  padding-top: var(--mat-form-field-filled-with-label-container-padding-top, 24px);
+  padding-bottom: var(--mat-form-field-filled-with-label-container-padding-bottom, 8px);
+
+}
+
+
+
+
+
+
+.form-page{
+
+.mdc-text-field__input {
+  font-size: 14px !important;
+  border: 1px solid white !important;
+}
+label{
+  font-size: 14px !important;
+}
+.mat-mdc-form-field-infix{
+  min-height: 30px !important;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+.mdc-list-item__primary-text{
+  color: white !important;
+}
+.mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked{
+ background: linear-gradient(45deg, #66bb6a, #43a047) !important;
+}
+.mat-mdc-form-field-text-prefix{
+  color: white !important;
+}
+.mat-mdc-form-field-icon-prefix{
+  color: black !important;
+}
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{
+  border-color: #B2D8B2 !important;
+}
+
+
+input::placeholder {
+  /* color: white !important; */
+  font-size: 12px !important;
+  overflow: hidden !important;
+}
+.mat-icon {
+  color: black !important;
+}
+.mat-mdc-form-field-text-prefix{
+  color: black !important;
+  font-size: 12px !important;
+}
+}
+
+.relative {
+  position: relative;
+}
+
+.overlay-bg {
+  position: absolute;
+  inset: 0;
+  /* background: rgba(17, 22, 24, 0.9); */
+  z-index: 0;
+  /* Ensure it sits below the content */
+}
+ .mat-icon{
+  color: white !important;
+}
+
+
+ .section h1{
+  color: #a6907c;
+}
+.line-border{
+  border-top: 5px solid #a6907c;
+  width: 63px;
+  margin: auto;
+}
+
+.submit {
+  .mat-mdc-button-persistent-ripple{
+  background: black !important;
+  }
+  .mdc-button__label{
+    color: white !important;
+  }
+}
+
+
+.reservation-area {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%), url('assets/images/banner.webp');
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image by default */
+  color: white !important;
+}
+
+.cursor-pointer{
+ cursor: pointer;
+}
+
+
+
+.reservation-right {
+  margin-bottom: 50px;
+  /* Adds space below the div */
+  /* background: white !important; */
+}
+
+.mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mdc-checkbox__ripple {
+  opacity: var(--mdc-checkbox-selected-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity));
+  background-color:black !important
+}
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+
+.form-page{
+  .header{
+    background: black !important;
+    color: white !important
+  }
+  background: #f4e1cf !important  ;
+  color: black !important;
+}
+.header{
+  .mat-icon{
+    color: white !important;
+  }
+  h3{
+    font-size: 22px;
+  font-weight: bold;
+  margin: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation-right {
+      margin-bottom: 15px;
+      /* Adjust for smaller screens */
+  }
+}
