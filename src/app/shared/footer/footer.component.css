@@ -1,0 +1,5 @@
+.footer-logo {
+    height: 65px;
+    object-fit: contain;
+    image-rendering: crisp-edges;
+}

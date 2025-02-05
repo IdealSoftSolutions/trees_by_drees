@@ -9,10 +9,7 @@ body {
   font-family:"League Spartan", arial, helvetica, sans-serif;
 }
 
-.heading{
-  font-size: 22px;
-  font-weight: bold;
-}
+
 
 .mat-mdc-button:not(:disabled) {
   color: white !important;
@@ -77,16 +74,6 @@ label{
   border-color: #B2D8B2 !important;
 }
 
- .mdc-text-field__input {
-  /* color: white !important; */
-}
-
-/* .mat-mdc-select {
-  color:white !important;
-}
-.mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
-  color: white !important;
-} */
 
 input::placeholder {
   /* color: white !important; */
@@ -146,12 +133,29 @@ input::placeholder {
   color: white !important;
 }
 
+.cursor-pointer{
+ cursor: pointer;
+}
+
 
 
 .reservation-right {
   margin-bottom: 50px;
   /* Adds space below the div */
   /* background: white !important; */
+}
+
+.mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mdc-checkbox__ripple {
+  opacity: var(--mdc-checkbox-selected-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity));
+  background-color:black !important
+}
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
 }
 
 .form-page{
@@ -161,6 +165,16 @@ input::placeholder {
   }
   background: #f4e1cf !important  ;
   color: black !important;
+}
+.header{
+  .mat-icon{
+    color: white !important;
+  }
+  h3{
+    font-size: 22px;
+  font-weight: bold;
+  margin: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {
