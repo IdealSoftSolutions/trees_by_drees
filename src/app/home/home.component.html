@@ -1,81 +1,106 @@
-<div class="container py-5">
-  <!-- Hero Section -->
-  <div class="hero-section text-center text-white">
-    <h1 class="display-4 fw-bold">Your Trusted Tree Experts</h1>
-    <p class="lead mb-4">Professional Tree Trimming, Removal & Arborist Services</p>
-    <a href="#services" class="btn btn-primary btn-lg rounded-pill">Explore Our Services</a>
+<section class="reservation-area section-gap relative">
+  <div class="container sticky-header">
+    <app-header></app-header>
+    <hr />
   </div>
 
-  <!-- Services Section -->
-  <section id="services" class="py-5">
-    <h2 class="text-center mb-5 display-4 fw-bold">Our Services</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col">
-        <div class="card service-card h-100 shadow-sm border-0 rounded">
-          <img src="/assets/images/tree-trimming.jpg" class="card-img-top" alt="Tree Trimming">
-          <div class="card-body">
-            <h5 class="card-title">Tree Trimming</h5>
-            <p class="card-text">Expert trimming services to keep your trees healthy and looking great all year long.
-            </p>
-            <a href="#" class="btn btn-primary stretched-link">Learn More</a>
-          </div>
-        </div>
+  <div class="banner py-5  text-center">
+    <h1 class="py-5 main">Branch Out Your Career – Enroll in Arborist Training Today!</h1>
+    <p>Every tree you touch today shapes the forests of tomorrow.</p>
+    <button routerLink='/enroll' class="my-5" mat-flat-button>ENROLL NOW</button>
+  </div>
+</section>
+<!-- ABOUT -->
+<div class="about container py-5 text-center">
+  <div class="fw-bold section pb-5">
+    <h1>Welcome to Drees Heavy Duty Tree Services</h1>
+    <hr class="line-border" />
+  </div>
+
+  <div class="row justify-content-center align-items-center">
+    <div class="col-lg-4 col-sm-6">
+      <img src="assets/images/home4.jpeg" width="50%" height="30%" alt="about" />
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <h4>Expert Tree Care Services</h4>
+      <span>At Drees, we specialize in providing top-notch tree care services. Our team of certified arborists ensures
+        the health and beauty of your trees, enhancing your landscape's appeal.</span>
+    </div>
+  </div>
+</div>
+<!-- CAROUSEL -->
+<div class="about container py-5 m-auto text-center">
+  <div class="fw-bold pb-5 section text-center">
+    <h1>Explore our stunning tree transformations and services at Drees - where nature meets expertise!</h1>
+    <hr class="line-border" />
+  </div>
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/home4.jpeg" class="d-block mx-auto carousel-image" height="40%" alt="...">
+
       </div>
-      <div class="col">
-        <div class="card service-card h-100 shadow-sm border-0 rounded">
-          <img src="/assets/images/tree-removal.jpg" class="card-img-top" alt="Tree Removal">
-          <div class="card-body">
-            <h5 class="card-title">Tree Removal</h5>
-            <p class="card-text">Safe and efficient tree removal, even in difficult spots. Let us handle the heavy
-              lifting.</p>
-            <a href="#" class="btn btn-primary stretched-link">Learn More</a>
-          </div>
-        </div>
+      <div class="carousel-item">
+        <img src="assets/images/home4.jpeg" class="d-block mx-auto carousel-image" height="40%" alt="...">
+
       </div>
-      <div class="col">
-        <div class="card service-card h-100 shadow-sm border-0 rounded">
-          <img src="/assets/images/arborist-training.jpg" class="card-img-top" alt="Arborist Training">
-          <div class="card-body">
-            <h5 class="card-title">Arborist Training</h5>
-            <p class="card-text">Training the next generation of arborists. Comprehensive and hands-on education.</p>
-            <a href="#" class="btn btn-primary stretched-link">Learn More</a>
-          </div>
+      <div class="carousel-item">
+        <img src="assets/images/home4.jpeg" class="d-block mx-auto carousel-image" height="40%" alt="...">
+
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- CONTACT US -->
+<div class="contact py-5 text-center">
+  <div class="fw-bold section">
+    <h1>Contact Us</h1>
+    <hr class="line-border" />
+  </div>
+</div>
+<div class="contact py-5 text-center">
+  <div class="section">
+    <h4><span class="fw-bold">Better yet, see us in person!</span></h4>
+    <span>we stay in constant communication with our customers until the job is done. To get a free quote, or if you
+      have questions or special requests, just drop us a line.</span>
+  </div>
+
+  <div class="contact py-5 text-center">
+    <div class="section">
+      <h4><span class="fw-bold">Trees by Drees</span></h4>
+      <span>4463 Central School Rd, St Charles, MO 63304.</span>
+    </div>
+    <div class="section">
+      <span>+1(636) 667-8966</span>
+    </div>
+    <div class="contact py-5 text-center">
+      <div class="section">
+        <h4><span class="fw-bold">Hours</span></h4>
+        <span>Open 24 Hours.</span>
+      </div>
+      <div class="contact py-5 text-center">
+        <div class="section">
+          <button routerLink='/getQuote' class="submit" mat-flat-button >GET A QUOTE</button>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Testimonials Section -->
-  <section class="py-5 bg-light">
-    <h2 class="text-center mb-5 display-4 fw-bold">What Our Clients Say</h2>
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="testimonial-card p-4 rounded shadow-sm bg-white">
-          <p class="fs-5">"The team did a fantastic job removing our trees safely and efficiently. Highly recommend!"
-          </p>
-          <footer class="blockquote-footer">John Doe <cite title="Source Title">Homeowner</cite></footer>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="testimonial-card p-4 rounded shadow-sm bg-white">
-          <p class="fs-5">"Amazing arborist training. I feel fully equipped to handle any tree care task."</p>
-          <footer class="blockquote-footer">Jane Smith <cite title="Source Title">Certified Arborist</cite></footer>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="testimonial-card p-4 rounded shadow-sm bg-white">
-          <p class="fs-5">"Very professional service. Our trees look fantastic, and the team was very careful."</p>
-          <footer class="blockquote-footer">Sarah Lee <cite title="Source Title">Business Owner</cite></footer>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Call to Action -->
-  <section class="cta-section text-center text-white" style="background-color: #1abc9c;">
-    <h2 class="fw-bold mb-4">Get Your Free Quote Today!</h2>
-    <p class="mb-4">Reach out for a personalized quote based on your tree service needs. We offer free, no-obligation
-      assessments!</p>
-    <a href="#quote" class="btn btn-light btn-lg rounded-pill">Request a Quote</a>
-  </section>
 </div>

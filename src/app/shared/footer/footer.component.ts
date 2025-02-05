@@ -11,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FooterComponent {
   footerdata = {
-    logoUrl: 'assets/images/logo.jpg',
+    logoUrl: 'assets/images/arborcerts-usa-logo.jpeg',
     background_image: 'assets/images/background-image.jpg'
   };
 }

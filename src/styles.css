@@ -1,16 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
-
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "League Spartan", arial, helvetica, sans-serif;
 }
 
-h1 {
-  font-family: 'Poppins', sans-serif;
+* {
+  font-family:"League Spartan", arial, helvetica, sans-serif;
 }
+
+
 
 .mat-mdc-button:not(:disabled) {
-  color: black !important;
+  color: white !important;
 }
 
 .mat-mdc-menu-panel {
@@ -18,7 +20,7 @@ h1 {
 }
 
 .mat-mdc-raised-button:not(:disabled) {
-  color: black !important;
+  color: white !important;
 }
 
 mat-icon {
@@ -38,31 +40,11 @@ mat-icon {
 }
 
 
-.mat-success {
-  background: linear-gradient(45deg, #66bb6a, #43a047) !important;
-  /* Gradient from lighter to darker green */
-  color: white !important;
-  border: none !important;
-  /* Optional: Ensure no borders interfere */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2) !important;
-  /* Optional: Add a subtle shadow for depth */
-  transition: transform 0.2s, box-shadow 0.2s !important;
-  /* Optional: Smooth hover effects */
-}
 
-.mat-success:hover {
-  transform: translateY(-2px) !important;
-  /* Slight lift on hover */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3) !important;
-  /* More prominent shadow on hover */
-}
 
-.mat-success.mat-mdc-button:not(:disabled),
-.mat-success.mat-mdc-raised-button:not(:disabled) {
-  color: white !important;
-}
 
-.reservation-area{
+
+.form-page{
 
 .mdc-text-field__input {
   font-size: 14px !important;
@@ -77,39 +59,32 @@ label{
   padding-bottom: 8px !important;
 }
 .mdc-list-item__primary-text{
-  color: black !important;
+  color: white !important;
 }
 .mat-pseudo-checkbox-full.mat-pseudo-checkbox-checked{
  background: linear-gradient(45deg, #66bb6a, #43a047) !important;
 }
 .mat-mdc-form-field-text-prefix{
+  color: white !important;
+}
+.mat-mdc-form-field-icon-prefix{
   color: black !important;
 }
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mat-mdc-notch-piece{
   border-color: #B2D8B2 !important;
 }
 
- .mdc-text-field__input {
-  color: white !important;
-}
-
-.mat-mdc-select {
-  color:white !important;
-}
-.mat-mdc-form-field.mat-focused .mat-mdc-select-arrow {
-  color: white !important;
-}
 
 input::placeholder {
-  color: white !important;
+  /* color: white !important; */
   font-size: 12px !important;
   overflow: hidden !important;
 }
 .mat-icon {
-  color: white !important;
+  color: black !important;
 }
 .mat-mdc-form-field-text-prefix{
-  color: white !important;
+  color: black !important;
   font-size: 12px !important;
 }
 }
@@ -121,43 +96,85 @@ input::placeholder {
 .overlay-bg {
   position: absolute;
   inset: 0;
-  background: rgba(17, 22, 24, 0.75);
+  /* background: rgba(17, 22, 24, 0.9); */
   z-index: 0;
   /* Ensure it sits below the content */
 }
-
-.reservation-area .container,
-.reservation-area h1 {
-  position: relative;
-  z-index: 1;
+ .mat-icon{
   color: white !important;
-  /* Place content above the overlay */
 }
 
-.reservation-area h1 {
-  border-bottom: 3px solid #43a047;
+
+ .section h1{
+  color: #a6907c;
+}
+.line-border{
+  border-top: 5px solid #a6907c;
+  width: 63px;
+  margin: auto;
 }
 
-.reservation-area label {
-  color: #F5F5F5  !important;
+.submit {
+  .mat-mdc-button-persistent-ripple{
+  background: black !important;
+  }
+  .mdc-button__label{
+    color: white !important;
+  }
 }
-
 
 
 .reservation-area {
-  background: url("/assets/images/quote-image.jpeg") no-repeat center/cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.28) 100%), url('assets/images/banner.webp');
   position: relative;
-  /* color: WHITE !important; */
-}
-
-.reservation-left {
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image by default */
   color: white !important;
 }
+
+.cursor-pointer{
+ cursor: pointer;
+}
+
+
 
 .reservation-right {
   margin-bottom: 50px;
   /* Adds space below the div */
   /* background: white !important; */
+}
+
+.mdc-checkbox__native-control:focus:focus:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:focus:focus:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+.mdc-checkbox .mdc-checkbox__native-control:focus:checked~.mdc-checkbox__ripple {
+  opacity: var(--mdc-checkbox-selected-focus-state-layer-opacity, var(--mat-sys-focus-state-layer-opacity));
+  background-color:black !important
+}
+.mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: black !important;
+  background-color: black !important;
+}
+
+.form-page{
+  .header{
+    background: black !important;
+    color: white !important
+  }
+  background: #f4e1cf !important  ;
+  color: black !important;
+}
+.header{
+  .mat-icon{
+    color: white !important;
+  }
+  h3{
+    font-size: 22px;
+  font-weight: bold;
+  margin: 0 !important;
+  }
 }
 
 @media (max-width: 768px) {
