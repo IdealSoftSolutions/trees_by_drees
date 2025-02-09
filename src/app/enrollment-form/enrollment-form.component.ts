@@ -59,7 +59,14 @@ export class EnrollmentFormComponent {
 
   onSubmit(): void {
     this.submitted = true;
-    if (this.enrollForm.valid) {
+    if (this.enrollForm.invalid) {
+      const topElement = document.getElementById('topOfForm');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      return;
+    }
       console.log('Form Submitted', this.enrollForm.value);
 
       // Updated API URL pointing to the backend server
@@ -73,7 +80,7 @@ export class EnrollmentFormComponent {
             alert('Failed to send the email. Please try again later.');
           }
         });
-    }
+  
   }
 
 }

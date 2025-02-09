@@ -31,7 +31,7 @@ export class GetQuoteFormComponent {
     return this.getAQuoteForm.controls;
   }
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  constructor(private readonly fb: FormBuilder, private readonly http: HttpClient) {
     this.getAQuoteForm = this.fb.group({
       first_name: ['', Validators.required],
       last_name: ['', Validators.required],
@@ -55,7 +55,15 @@ export class GetQuoteFormComponent {
   }
   onSubmit(): void {
     this.submitted = true;
-    if (this.getAQuoteForm.valid) {
+    if (this.getAQuoteForm.invalid) {
+      const topElement = document.getElementById('topOfForm');
+      if (topElement) {
+        topElement.scrollIntoView({ behavior: 'smooth' });
+      }
+      
+      return;
+    }
+    
       console.log('Form Submitted', this.getAQuoteForm.value);
 
       // Updated API URL pointing to the backend server
@@ -69,7 +77,7 @@ export class GetQuoteFormComponent {
             alert('Failed to send the email. Please try again later.');
           }
         });
-    }
+    
   }
 }
 
