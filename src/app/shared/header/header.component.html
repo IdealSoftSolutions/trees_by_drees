@@ -2,8 +2,20 @@
   <h3 routerLink="/" class="cursor-pointer">Arbor Certs USA</h3>
   <div class="d-flex align-items-center">
     @for (item of headerData.menu; track item.label) {
-    <button [routerLink]="item.link" class="menu-items" [disableRipple]="true"
-      [routerLinkActiveOptions]="{ exact: true }" routerLinkActive="active" mat-button> {{item.label}}</button>
+      @if(item.link.startsWith('https') ){
+        <button (click)="openExternalSite(item.link)"
+        class="menu-items" mat-button>
+  {{ item.label }}
+  </button>
+      }
+     @else {
+      <button  [routerLink]="item.link"
+      class="menu-items" routerLinkActive="active" mat-button>
+{{ item.label }}
+</button>
+     }
+
+
     }
     <mat-icon class="responsive-menu cursor-pointer" aria-hidden="false" data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasRight" fontIcon="view_headline"></mat-icon>
@@ -15,7 +27,12 @@
       <div class="offcanvas-body">
         <mat-list role="list">
           @for (item of headerData.menu; track item.label) {
+            @if(item.link.startsWith('https') ){
+              <mat-list-item (click)="openExternalSite(item.link)" role="listitem">{{item.label}}</mat-list-item>
+            }
+            @else {
           <mat-list-item [routerLink]="item.link" role="listitem">{{item.label}}</mat-list-item>
+            }
           <hr />
           }
         </mat-list>

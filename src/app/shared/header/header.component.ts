@@ -34,6 +34,10 @@ export class HeaderComponent implements OnInit {
       {
         label: 'Get a Quote',
         link: '/getQuote',
+      },
+      {
+        label:'Shop',
+        link:'https://ipchfv-gg.myshopify.com/'
       }
     ]
   };
@@ -45,6 +49,10 @@ export class HeaderComponent implements OnInit {
     this.breakpointObserver.observe([Breakpoints.Handset]).subscribe(result => {
       this.mobileQuery = result.matches ? window.matchMedia('(max-width: 600px)') : window.matchMedia('(min-width: 600px)');
     });
+  }
+
+  openExternalSite(url: string) {
+    window.open(url, '_blank'); // Opens in a new tab
   }
 
   openMenu() {
